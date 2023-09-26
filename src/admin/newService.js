@@ -38,6 +38,7 @@ let pointsText = []
 let countPoint = 1
 let idFrom = 0
 let submitAndUpdate = "submit"
+let editB = false
 export default function NewService(){
     const classes = useStyles();
     const [one,setOne]=useState("")
@@ -229,11 +230,18 @@ export default function NewService(){
         setTitle1(row.title1)
         setPointsTitle(JSON.parse(row.pointall)[0].title)
         if(pointTitle.length !== 1){
+            console.log(pointTitle)
             setPoint(pointTitle)
+/*
+            let pointTitleShift = pointTitle.splice(0, 1);
+            console.log(pointTitleShift)
+ */
+
         }
         setPointText(pointsText)
         setValue(row.tobeornottobe)
         document.getElementById("input").focus()
+        editB = true
         setButton(<><Button onClick={()=>{clear()}}>Очистити</Button></>)
     }
 
@@ -275,6 +283,7 @@ export default function NewService(){
                clear()
            })
        }
+        editB = false
     }
 
     function clear(){
@@ -284,7 +293,7 @@ export default function NewService(){
         pointsText = []
         countPoint = 1
         idFrom = 0
-
+        editB = false
         setValue('true')
         setText("")
         setText1("")
@@ -307,15 +316,18 @@ export default function NewService(){
     }
 
     function addInputPoint(){
+        console.log("pointTitle.length")
+        console.log(pointTitle.length)
+        console.log("pointsText")
+        console.log(pointsText)
+        console.log("countPoint")
+        console.log(countPoint)
         if(pointTitle.length === countPoint && pointTitle[pointTitle.length-1] !== ""){
             countPoint++
             setPoint([...point,(
                 <></>
             )])
-        }
 
-        if(pointsText.length === countPoint && pointsText[pointsText.length-1] !== ""){
-            countPoint++
             setPointText([...pointsText,(
                 <></>
             )])
@@ -430,38 +442,76 @@ export default function NewService(){
                             }} defaultValue={pointsText[0]}/>
                             <br/>
                             {point.map((input, index)=>{
-                                return (
-                                    <>
-                                        <Input
-                                            style={{width:"100%",margin:"10px 0px 10px"}}
-                                            key={index+1}
-                                            defaultValue={pointTitle[index+1]}
-                                            placeholder={'Пункт '+countPoint+' *'}
-                                            onChange={(e) => {
-                                                if(index+1 <= pointTitle.length){
-                                                    pointTitle[index+1] =  e.target.value
-                                                }else{
-                                                    pointTitle = pointTitle.concat(e.target.value)
-                                                }
-                                            }}
-                                        />
-                                        <Input
-                                            style={{width:"100%",margin:"10px 0px 10px"}}
-                                            key={index+1}
-                                            defaultValue={pointsText[index+1]}
-                                            placeholder={'Текст до пункту '+countPoint+' *'}
-                                            onChange={(e) => {
-                                                if(index+1 <= pointsText.length){
-                                                    pointsText[index+1] =  e.target.value
-                                                }else{
-                                                    pointsText = pointsText.concat(e.target.value)
-                                                }
-                                            }}
-                                        />
-                                        <br/>
-                                    </>
+                                if(editB){
+                                    if(index !== 0){
+                                        return (
+                                            <>
+                                                <Input
+                                                    style={{width:"100%",margin:"10px 0px 10px"}}
+                                                    key={index}
+                                                    defaultValue={pointTitle[index]}
+                                                    placeholder={'Пункт '+countPoint+' *'}
+                                                    onChange={(e) => {
+                                                        if(index <= pointTitle.length){
+                                                            pointTitle[index] =  e.target.value
+                                                        }else{
+                                                            pointTitle = pointTitle.concat(e.target.value)
+                                                        }
+                                                    }}
+                                                />
+                                                <Input
+                                                    style={{width:"100%",margin:"10px 0px 10px"}}
+                                                    key={index}
+                                                    defaultValue={pointsText[index]}
+                                                    placeholder={'Текст до пункту '+countPoint+' *'}
+                                                    onChange={(e) => {
+                                                        if(index <= pointsText.length){
+                                                            pointsText[index] =  e.target.value
+                                                        }else{
+                                                            pointsText = pointsText.concat(e.target.value)
+                                                        }
+                                                    }}
+                                                />
+                                                <br/>
+                                            </>
 
-                                )
+                                        )
+                                    }
+                                }else {
+                                    return (
+                                        <>
+                                            <Input
+                                                style={{width:"100%",margin:"10px 0px 10px"}}
+                                                key={index+1}
+                                                defaultValue={pointTitle[index+1]}
+                                                placeholder={'Пункт '+countPoint+' *'}
+                                                onChange={(e) => {
+                                                    if(index+1 <= pointTitle.length){
+                                                        pointTitle[index+1] =  e.target.value
+                                                    }else{
+                                                        pointTitle = pointTitle.concat(e.target.value)
+                                                    }
+                                                }}
+                                            />
+                                            <Input
+                                                style={{width:"100%",margin:"10px 0px 10px"}}
+                                                key={index+1}
+                                                defaultValue={pointsText[index+1]}
+                                                placeholder={'Текст до пункту '+countPoint+' *'}
+                                                onChange={(e) => {
+                                                    if(index+1 <= pointsText.length){
+                                                        pointsText[index+1] =  e.target.value
+                                                    }else{
+                                                        pointsText = pointsText.concat(e.target.value)
+                                                    }
+                                                }}
+                                            />
+                                            <br/>
+                                        </>
+
+                                    )
+                                }
+
                             })}
                             <AddCircleIcon htmlColor={"#13ad0a"} sx={{fontSize:50,cursor:"pointer"}} onClick={addInputPoint}/>
                             <RemoveIcon htmlColor={"#ad0a0a"} sx={{fontSize:50,cursor:"pointer"}} onClick={removeLastInput}/>
