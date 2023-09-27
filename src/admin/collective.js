@@ -97,55 +97,101 @@ export default function Collective(){
     const classes = useStyles();
 
     const handleChange = (newValue) => {
-        namePhoto0=newValue.name
-        setPlaceholder(namePhoto0)
         setValue0(newValue);
+        if(newValue !== null){
+            namePhoto0=newValue.name
+            setPlaceholder(namePhoto0)
+        }else{
+            namePhoto0=""
+            setPlaceholder(namePhoto0)
+        }
+
     };
     const handleChange1 = (newValue1) => {
-        namePhoto1=newValue1.name
-        setPlaceholder1(namePhoto1)
         setValue1(newValue1);
+        if(newValue1 !== null){
+            namePhoto1=newValue1.name
+            setPlaceholder1(namePhoto1)
+        }else{
+            namePhoto1=""
+            setPlaceholder1(namePhoto1)
+        }
     };
     const handleChange2 = (newValue2) => {
-        namePhoto2=newValue2.name
-        setPlaceholder2(namePhoto2)
         setValue2(newValue2);
+        if(newValue2 !== null){
+            namePhoto2=newValue2.name
+            setPlaceholder2(namePhoto2)
+        }else{
+            namePhoto2=""
+            setPlaceholder2(namePhoto2)
+        }
     };
 
     const handleChange3 = (newValue3) => {
-        namePhoto3=newValue3.name
-        setPlaceholder3(namePhoto3)
         setValue3(newValue3);
+        if(newValue3 !== null){
+            namePhoto3=newValue3.name
+            setPlaceholder3(namePhoto3)
+        }else{
+            namePhoto3=""
+            setPlaceholder3(namePhoto3)
+        }
     };
 
     const handleChange4 = (newValue4) => {
-        namePhoto4=newValue4.name
-        setPlaceholder4(namePhoto4)
         setValue4(newValue4);
+        if(newValue4 !== null){
+            namePhoto4=newValue4.name
+            setPlaceholder4(namePhoto4)
+        }else{
+            namePhoto4=""
+            setPlaceholder4(namePhoto4)
+        }
     };
 
     const handleChange5 = (newValue5) => {
-        namePhoto5=newValue5.name
-        setPlaceholder5(namePhoto5)
         setValue5(newValue5);
+        if(newValue5 !== null){
+            namePhoto5=newValue5.name
+            setPlaceholder5(namePhoto5)
+        }else{
+            namePhoto5=""
+            setPlaceholder5(namePhoto5)
+        }
     };
 
     const handleChange6 = (newValue6) => {
-        namePhoto6=newValue6.name
-        setPlaceholder6(namePhoto6)
         setValue6(newValue6);
+        if(newValue6 !== null){
+            namePhoto6=newValue6.name
+            setPlaceholder6(namePhoto6)
+        }else{
+            namePhoto6=""
+            setPlaceholder6(namePhoto6)
+        }
     };
 
     const handleChange7 = (newValue7) => {
-        namePhoto7=newValue7.name
-        setPlaceholder7(namePhoto7)
         setValue7(newValue7);
+        if(newValue7 !== null){
+            namePhoto7=newValue7.name
+            setPlaceholder7(namePhoto7)
+        }else{
+            namePhoto7=""
+            setPlaceholder7(namePhoto7)
+        }
     };
 
     const handleChange8 = (newValue8) => {
-        namePhoto8=newValue8.name
-        setPlaceholder8(namePhoto8)
         setValue8(newValue8);
+        if(newValue8 !== null){
+            namePhoto8=newValue8.name
+            setPlaceholder8(namePhoto8)
+        }else{
+            namePhoto8=""
+            setPlaceholder8(namePhoto8)
+        }
     };
 
     function submit(e){
@@ -288,15 +334,15 @@ export default function Collective(){
                 <Paper className={classes.paper}>
                     <Title>Колектив</Title>
                     <form onSubmit={(e)=>{submit(e)}}  id="form" style={{width:"100%"}} key={idFrom}>
-                        <Input style={{width:"100%",margin:"10px 0px 10px"}} placeholder="Заголовок" defaultValue={title} onChange={(e)=>{setTitle(e.target.value)}} required/>
+                        <Input style={{width:"100%",margin:"10px 0px 10px"}} placeholder="Заголовок" defaultValue={title} onChange={(e)=>{setTitle(e.target.value)}} />
                         <br/>
-                        <Input style={{width:"100%",margin:"10px 0px 10px"}} placeholder="Заголовок пунктів" defaultValue={titlePoint} onChange={(e)=>{setTitlePoint(e.target.value)}} required/>
+                        <Input style={{width:"100%",margin:"10px 0px 10px"}} placeholder="Заголовок пунктів" defaultValue={titlePoint} onChange={(e)=>{setTitlePoint(e.target.value)}} />
                         <br/>
-                        <Input style={{width:"100%",margin:"10px 0px 10px"}} placeholder="Пункт 1" defaultValue={point1} onChange={(e)=>{setPoint1(e.target.value)}} required/>
+                        <Input style={{width:"100%",margin:"10px 0px 10px"}} placeholder="Пункт 1" defaultValue={point1} onChange={(e)=>{setPoint1(e.target.value)}} />
                         <br/>
-                        <Input style={{width:"100%",margin:"10px 0px 10px"}} placeholder="Пункт 2" defaultValue={point2} onChange={(e)=>{setPoint2(e.target.value)}} required/>
+                        <Input style={{width:"100%",margin:"10px 0px 10px"}} placeholder="Пункт 2" defaultValue={point2} onChange={(e)=>{setPoint2(e.target.value)}} />
                         <br/>
-                        <Input style={{width:"100%",margin:"10px 0px 10px"}} placeholder="Пункт 3" defaultValue={point3} onChange={(e)=>{setPoint3(e.target.value)}} required/>
+                        <Input style={{width:"100%",margin:"10px 0px 10px"}} placeholder="Пункт 3" defaultValue={point3} onChange={(e)=>{setPoint3(e.target.value)}} />
                         <br/>
                         <MuiFileInput
                             placeholder={placeholder}
@@ -305,9 +351,9 @@ export default function Collective(){
                             inputProps={{ accept: '.png, .jpeg, .jpg' }}
                         />
                         <br/>
-                        <Input style={{width:"100%",margin:"10px 0px 10px"}} placeholder="Текст другого блоку" defaultValue={textBlock2} onChange={(e)=>{setTextBlock2(e.target.value)}} required/>
+                        <Input style={{width:"100%",margin:"10px 0px 10px"}} placeholder="Текст другого блоку" defaultValue={textBlock2} onChange={(e)=>{setTextBlock2(e.target.value)}} />
                         <br/>
-                        <Input style={{width:"100%",margin:"10px 0px 10px"}} placeholder="Заголовок третього блоку" defaultValue={titleBlock3} onChange={(e)=>{setTitleBlock3(e.target.value)}} required/>
+                        <Input style={{width:"100%",margin:"10px 0px 10px"}} placeholder="Заголовок третього блоку" defaultValue={titleBlock3} onChange={(e)=>{setTitleBlock3(e.target.value)}} />
                         <br/>
                         <MuiFileInput
                             placeholder={placeholder1}
@@ -316,11 +362,11 @@ export default function Collective(){
                             inputProps={{ accept: '.png, .jpeg, .jpg' }}
                         />
                         <br/>
-                        <Input style={{width:"100%",margin:"10px 0px 10px"}} placeholder="ПІБ 1" defaultValue={pib1} onChange={(e)=>{setPib1(e.target.value)}} required/>
+                        <Input style={{width:"100%",margin:"10px 0px 10px"}} placeholder="ПІБ 1" defaultValue={pib1} onChange={(e)=>{setPib1(e.target.value)}} />
                         <br/>
-                        <Input style={{width:"100%",margin:"10px 0px 10px"}} placeholder="Посада 1" defaultValue={position1} onChange={(e)=>{setPosition1(e.target.value)}} required/>
+                        <Input style={{width:"100%",margin:"10px 0px 10px"}} placeholder="Посада 1" defaultValue={position1} onChange={(e)=>{setPosition1(e.target.value)}} />
                         <br/>
-                        <Input style={{width:"100%",margin:"10px 0px 10px"}} placeholder="Текст 1" defaultValue={text1} onChange={(e)=>{setText1(e.target.value)}} required/>
+                        <Input style={{width:"100%",margin:"10px 0px 10px"}} placeholder="Текст 1" defaultValue={text1} onChange={(e)=>{setText1(e.target.value)}} />
                         <br/>
                         <MuiFileInput
                             placeholder={placeholder2}
@@ -329,15 +375,15 @@ export default function Collective(){
                             inputProps={{ accept: '.png, .jpeg, .jpg' }}
                         />
                         <br/>
-                        <Input style={{width:"100%",margin:"10px 0px 10px"}} placeholder="ПІБ 2" defaultValue={pib2} onChange={(e)=>{setPib2(e.target.value)}} required/>
+                        <Input style={{width:"100%",margin:"10px 0px 10px"}} placeholder="ПІБ 2" defaultValue={pib2} onChange={(e)=>{setPib2(e.target.value)}} />
                         <br/>
-                        <Input style={{width:"100%",margin:"10px 0px 10px"}} placeholder="Посада 2" defaultValue={position2} onChange={(e)=>{setPosition2(e.target.value)}} required/>
+                        <Input style={{width:"100%",margin:"10px 0px 10px"}} placeholder="Посада 2" defaultValue={position2} onChange={(e)=>{setPosition2(e.target.value)}} />
                         <br/>
-                        <Input style={{width:"100%",margin:"10px 0px 10px"}} placeholder="Текст 2" defaultValue={text2} onChange={(e)=>{setText2(e.target.value)}} required/>
+                        <Input style={{width:"100%",margin:"10px 0px 10px"}} placeholder="Текст 2" defaultValue={text2} onChange={(e)=>{setText2(e.target.value)}} />
                         <br/>
 
 
-                        <Input style={{width:"100%",margin:"10px 0px 10px"}} placeholder="Заголовок четвертого блоку" defaultValue={titleBlock4} onChange={(e)=>{setTitleBlock4(e.target.value)}} required/>
+                        <Input style={{width:"100%",margin:"10px 0px 10px"}} placeholder="Заголовок четвертого блоку" defaultValue={titleBlock4} onChange={(e)=>{setTitleBlock4(e.target.value)}} />
                         <br/>
                         <MuiFileInput
                             placeholder={placeholder3}
@@ -346,11 +392,11 @@ export default function Collective(){
                             inputProps={{ accept: '.png, .jpeg, .jpg' }}
                         />
                         <br/>
-                        <Input style={{width:"100%",margin:"10px 0px 10px"}} placeholder="ПІБ 3" defaultValue={pib3} onChange={(e)=>{setPib3(e.target.value)}} required/>
+                        <Input style={{width:"100%",margin:"10px 0px 10px"}} placeholder="ПІБ 3" defaultValue={pib3} onChange={(e)=>{setPib3(e.target.value)}} />
                         <br/>
-                        <Input style={{width:"100%",margin:"10px 0px 10px"}} placeholder="Посада 3" defaultValue={position3} onChange={(e)=>{setPosition3(e.target.value)}} required/>
+                        <Input style={{width:"100%",margin:"10px 0px 10px"}} placeholder="Посада 3" defaultValue={position3} onChange={(e)=>{setPosition3(e.target.value)}} />
                         <br/>
-                        <Input style={{width:"100%",margin:"10px 0px 10px"}} placeholder="Текст 3" defaultValue={text3} onChange={(e)=>{setText3(e.target.value)}} required/>
+                        <Input style={{width:"100%",margin:"10px 0px 10px"}} placeholder="Текст 3" defaultValue={text3} onChange={(e)=>{setText3(e.target.value)}} />
                         <br/>
                         <MuiFileInput
                             placeholder={placeholder4}
@@ -359,15 +405,15 @@ export default function Collective(){
                             inputProps={{ accept: '.png, .jpeg, .jpg' }}
                         />
                         <br/>
-                        <Input style={{width:"100%",margin:"10px 0px 10px"}} placeholder="ПІБ 4" defaultValue={pib4} onChange={(e)=>{setPib4(e.target.value)}} required/>
+                        <Input style={{width:"100%",margin:"10px 0px 10px"}} placeholder="ПІБ 4" defaultValue={pib4} onChange={(e)=>{setPib4(e.target.value)}} />
                         <br/>
-                        <Input style={{width:"100%",margin:"10px 0px 10px"}} placeholder="Посада 4" defaultValue={position4} onChange={(e)=>{setPosition4(e.target.value)}} required/>
+                        <Input style={{width:"100%",margin:"10px 0px 10px"}} placeholder="Посада 4" defaultValue={position4} onChange={(e)=>{setPosition4(e.target.value)}} />
                         <br/>
-                        <Input style={{width:"100%",margin:"10px 0px 10px"}} placeholder="Текст 4" defaultValue={text4} onChange={(e)=>{setText4(e.target.value)}} required/>
+                        <Input style={{width:"100%",margin:"10px 0px 10px"}} placeholder="Текст 4" defaultValue={text4} onChange={(e)=>{setText4(e.target.value)}} />
                         <br/>
 
 
-                        <Input style={{width:"100%",margin:"10px 0px 10px"}} placeholder="Заголовок п'ятого блоку" defaultValue={titleBlock5} onChange={(e)=>{setTitleBlock5(e.target.value)}} required/>
+                        <Input style={{width:"100%",margin:"10px 0px 10px"}} placeholder="Заголовок п'ятого блоку" defaultValue={titleBlock5} onChange={(e)=>{setTitleBlock5(e.target.value)}} />
                         <br/>
                         <MuiFileInput
                             placeholder={placeholder5}
@@ -376,11 +422,11 @@ export default function Collective(){
                             inputProps={{ accept: '.png, .jpeg, .jpg' }}
                         />
                         <br/>
-                        <Input style={{width:"100%",margin:"10px 0px 10px"}} placeholder="ПІБ 5" defaultValue={pib5} onChange={(e)=>{setPib5(e.target.value)}} required/>
+                        <Input style={{width:"100%",margin:"10px 0px 10px"}} placeholder="ПІБ 5" defaultValue={pib5} onChange={(e)=>{setPib5(e.target.value)}} />
                         <br/>
-                        <Input style={{width:"100%",margin:"10px 0px 10px"}} placeholder="Посада 5" defaultValue={position5} onChange={(e)=>{setPosition5(e.target.value)}} required/>
+                        <Input style={{width:"100%",margin:"10px 0px 10px"}} placeholder="Посада 5" defaultValue={position5} onChange={(e)=>{setPosition5(e.target.value)}} />
                         <br/>
-                        <Input style={{width:"100%",margin:"10px 0px 10px"}} placeholder="Текст 5" defaultValue={text5} onChange={(e)=>{setText5(e.target.value)}} required/>
+                        <Input style={{width:"100%",margin:"10px 0px 10px"}} placeholder="Текст 5" defaultValue={text5} onChange={(e)=>{setText5(e.target.value)}} />
                         <br/>
                         <MuiFileInput
                             placeholder={placeholder6}
@@ -389,15 +435,15 @@ export default function Collective(){
                             inputProps={{ accept: '.png, .jpeg, .jpg' }}
                         />
                         <br/>
-                        <Input style={{width:"100%",margin:"10px 0px 10px"}} placeholder="ПІБ 6" defaultValue={pib6} onChange={(e)=>{setPib6(e.target.value)}} required/>
+                        <Input style={{width:"100%",margin:"10px 0px 10px"}} placeholder="ПІБ 6" defaultValue={pib6} onChange={(e)=>{setPib6(e.target.value)}} />
                         <br/>
-                        <Input style={{width:"100%",margin:"10px 0px 10px"}} placeholder="Посада 6" defaultValue={position6} onChange={(e)=>{setPosition6(e.target.value)}} required/>
+                        <Input style={{width:"100%",margin:"10px 0px 10px"}} placeholder="Посада 6" defaultValue={position6} onChange={(e)=>{setPosition6(e.target.value)}} />
                         <br/>
-                        <Input style={{width:"100%",margin:"10px 0px 10px"}} placeholder="Текст 6" defaultValue={text6} onChange={(e)=>{setText6(e.target.value)}} required/>
+                        <Input style={{width:"100%",margin:"10px 0px 10px"}} placeholder="Текст 6" defaultValue={text6} onChange={(e)=>{setText6(e.target.value)}} />
                         <br/>
 
 
-                        <Input style={{width:"100%",margin:"10px 0px 10px"}} placeholder="Заголовок шостого блоку" defaultValue={titleBlock6} onChange={(e)=>{setTitleBlock6(e.target.value)}} required/>
+                        <Input style={{width:"100%",margin:"10px 0px 10px"}} placeholder="Заголовок шостого блоку" defaultValue={titleBlock6} onChange={(e)=>{setTitleBlock6(e.target.value)}} />
                         <br/>
                         <MuiFileInput
                             placeholder={placeholder7}
@@ -406,11 +452,11 @@ export default function Collective(){
                             inputProps={{ accept: '.png, .jpeg, .jpg' }}
                         />
                         <br/>
-                        <Input style={{width:"100%",margin:"10px 0px 10px"}} placeholder="ПІБ 7" defaultValue={pib7} onChange={(e)=>{setPib7(e.target.value)}} required/>
+                        <Input style={{width:"100%",margin:"10px 0px 10px"}} placeholder="ПІБ 7" defaultValue={pib7} onChange={(e)=>{setPib7(e.target.value)}} />
                         <br/>
-                        <Input style={{width:"100%",margin:"10px 0px 10px"}} placeholder="Посада 7" defaultValue={position7} onChange={(e)=>{setPosition7(e.target.value)}} required/>
+                        <Input style={{width:"100%",margin:"10px 0px 10px"}} placeholder="Посада 7" defaultValue={position7} onChange={(e)=>{setPosition7(e.target.value)}} />
                         <br/>
-                        <Input style={{width:"100%",margin:"10px 0px 10px"}} placeholder="Текст 7" defaultValue={text7} onChange={(e)=>{setText7(e.target.value)}} required/>
+                        <Input style={{width:"100%",margin:"10px 0px 10px"}} placeholder="Текст 7" defaultValue={text7} onChange={(e)=>{setText7(e.target.value)}} />
                         <br/>
                         <MuiFileInput
                             placeholder={placeholder8}
@@ -419,11 +465,11 @@ export default function Collective(){
                             inputProps={{ accept: '.png, .jpeg, .jpg' }}
                         />
                         <br/>
-                        <Input style={{width:"100%",margin:"10px 0px 10px"}} placeholder="ПІБ 8" defaultValue={pib8} onChange={(e)=>{setPib8(e.target.value)}} required/>
+                        <Input style={{width:"100%",margin:"10px 0px 10px"}} placeholder="ПІБ 8" defaultValue={pib8} onChange={(e)=>{setPib8(e.target.value)}} />
                         <br/>
-                        <Input style={{width:"100%",margin:"10px 0px 10px"}} placeholder="Посада 8" defaultValue={position8} onChange={(e)=>{setPosition8(e.target.value)}} required/>
+                        <Input style={{width:"100%",margin:"10px 0px 10px"}} placeholder="Посада 8" defaultValue={position8} onChange={(e)=>{setPosition8(e.target.value)}} />
                         <br/>
-                        <Input style={{width:"100%",margin:"10px 0px 10px"}} placeholder="Текст 8" defaultValue={text8} onChange={(e)=>{setText8(e.target.value)}} required/>
+                        <Input style={{width:"100%",margin:"10px 0px 10px"}} placeholder="Текст 8" defaultValue={text8} onChange={(e)=>{setText8(e.target.value)}} />
                         <br/>
 
                         <div className={classes.seeMore}>

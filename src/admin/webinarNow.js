@@ -298,9 +298,8 @@ export default function WebinarNow(){
         setPoint3(row.points3)
         setPoint4(row.points4)
         setLecturer(row.lecturerandtext)
-        let dataInputEdit =  String(row.data).split(".")
         setData(row.data)
-        setDataW(dataInputEdit[2]+'-'+dataInputEdit[1]+'-'+dataInputEdit[0])
+        setDataW(row.data)
         setTime(row.time)
         setPrice(row.price)
         setLocation(row.location)
@@ -526,9 +525,9 @@ export default function WebinarNow(){
                             <br/>
                             <Title>Блок дата / час / ціна / місце</Title>
                             <form id="form2" style={{width:"100%"}} key={idFrom+1}>
-                                <Input id="input" style={{width:"100%",margin:"10px 0px 10px"}}  placeholder="Дата *" type="date" onChange={(e)=>{
-                                    let dataArr = String(e.target.value).split("-")
-                                    setData(dataArr[2]+"."+dataArr[1]+"."+dataArr[0])}} defaultValue={dataW}/>
+                                <Input id="input" style={{width:"100%",margin:"10px 0px 10px"}}  placeholder="Дата *" onChange={(e)=>{
+
+                                    setData(e.target.value)}} defaultValue={dataW}/>
                                 <br/>
                                 <Input id="input" style={{width:"100%",margin:"10px 0px 10px"}}  placeholder="Час *" onChange={(e)=>{setTime(e.target.value)}} defaultValue={time}/>
                                 <br/>

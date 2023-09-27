@@ -207,7 +207,7 @@ export default function NewService(){
 
     useEffect(()=>{
         get()
-    },[one])
+    },[])
 
 
     function edit(row){
@@ -535,7 +535,7 @@ export default function NewService(){
                         <Input style={{width:"100%",margin:"10px 0px 10px"}} placeholder="Текст"   onChange={(e)=>{setText(e.target.value)}} defaultValue={text}/>
                         <br/>
                         <FormGroup>
-                            <FormLabel id="demo-radio-buttons-group-label">Чибуде кнопка "Отримати консультацію"?</FormLabel>
+                            <FormLabel id="demo-radio-buttons-group-label">Чи буде кнопка "Отримати консультацію"?</FormLabel>
                             <RadioGroup
                                 aria-labelledby="demo-radio-buttons-group-label"
                                 name="radio-buttons-group"

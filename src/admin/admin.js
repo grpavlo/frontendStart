@@ -53,6 +53,7 @@ import BusinessIcon from '@mui/icons-material/Business';
 import Collective from "./collective";
 import Head from "./head";
 import Clients from "./clients";
+import NewServiceTwo from "./newServiceTwo";
 
 
 let carousel = false
@@ -205,6 +206,11 @@ function Admin() {
     function newService() {
         setMainPanel(
             <NewService/>
+        )
+    }
+    function newServiceTwo() {
+        setMainPanel(
+            <NewServiceTwo/>
         )
     }
 
@@ -385,7 +391,7 @@ function Admin() {
                             </List>
                         </Collapse>
                     </List>
-                    <ListItem button onClick={newService}>
+                    <ListItem button onClick={newServiceTwo}>
                         <ListItemIcon>
                             <HomeRepairServiceIcon />
                         </ListItemIcon>

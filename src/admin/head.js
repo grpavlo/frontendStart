@@ -260,65 +260,65 @@ export default function Head(){
                             inputProps={{ accept: '.png, .jpeg, .jpg' }}
                         />
                         <br/>
-                        <Input style={{width:"100%",margin:"10px 0px 10px"}} placeholder="Підзаголовок" defaultValue={subTitle} onChange={(e)=>{setSubTitle(e.target.value)}} required/>
+                        <Input style={{width:"100%",margin:"10px 0px 10px"}} placeholder="Підзаголовок" defaultValue={subTitle} onChange={(e)=>{setSubTitle(e.target.value)}} />
                         <br/>
-                        <Input style={{width:"100%",margin:"10px 0px 10px"}} placeholder="Заголовок" defaultValue={title} onChange={(e)=>{setTitle(e.target.value)}} required/>
+                        <Input style={{width:"100%",margin:"10px 0px 10px"}} placeholder="Заголовок" defaultValue={title} onChange={(e)=>{setTitle(e.target.value)}} />
                         <br/>
-                        <Input style={{width:"100%",margin:"10px 0px 10px"}} placeholder="Підзаголовок пунктів" defaultValue={subtitlePoint} onChange={(e)=>{setSubtitlePoint(e.target.value)}} required/>
+                        <Input style={{width:"100%",margin:"10px 0px 10px"}} placeholder="Підзаголовок пунктів" defaultValue={subtitlePoint} onChange={(e)=>{setSubtitlePoint(e.target.value)}} />
                         <br/>
-                        <Input style={{width:"100%",margin:"10px 0px 10px"}} placeholder="Пункт 1" defaultValue={point1} onChange={(e)=>{setPoint1(e.target.value)}} required/>
+                        <Input style={{width:"100%",margin:"10px 0px 10px"}} placeholder="Пункт 1" defaultValue={point1} onChange={(e)=>{setPoint1(e.target.value)}} />
                         <br/>
-                        <Input style={{width:"100%",margin:"10px 0px 10px"}} placeholder="Пункт 2" defaultValue={point2} onChange={(e)=>{setPoint2(e.target.value)}} required/>
+                        <Input style={{width:"100%",margin:"10px 0px 10px"}} placeholder="Пункт 2" defaultValue={point2} onChange={(e)=>{setPoint2(e.target.value)}} />
                         <br/>
-                        <Input style={{width:"100%",margin:"10px 0px 10px"}} placeholder="Пункт 3" defaultValue={point3} onChange={(e)=>{setPoint3(e.target.value)}} required/>
+                        <Input style={{width:"100%",margin:"10px 0px 10px"}} placeholder="Пункт 3" defaultValue={point3} onChange={(e)=>{setPoint3(e.target.value)}} />
                         <br/>
-                        <Input style={{width:"100%",margin:"10px 0px 10px"}} placeholder="Пункт 4" defaultValue={point4} onChange={(e)=>{setPoint4(e.target.value)}} required/>
+                        <Input style={{width:"100%",margin:"10px 0px 10px"}} placeholder="Пункт 4" defaultValue={point4} onChange={(e)=>{setPoint4(e.target.value)}} />
                         <br/>
-                        <Input style={{width:"100%",margin:"10px 0px 10px"}} placeholder="Пункт 5" defaultValue={point5} onChange={(e)=>{setPoint5(e.target.value)}} required/>
+                        <Input style={{width:"100%",margin:"10px 0px 10px"}} placeholder="Пункт 5" defaultValue={point5} onChange={(e)=>{setPoint5(e.target.value)}} />
                         <br/>
-                        <Input style={{width:"100%",margin:"10px 0px 10px"}} placeholder="Пункт 6" defaultValue={point6} onChange={(e)=>{setPoint6(e.target.value)}} required/>
+                        <Input style={{width:"100%",margin:"10px 0px 10px"}} placeholder="Пункт 6" defaultValue={point6} onChange={(e)=>{setPoint6(e.target.value)}} />
                         <br/>
-                        <Input style={{width:"100%",margin:"10px 0px 10px"}} placeholder="Пункт 7" defaultValue={point7} onChange={(e)=>{setPoint7(e.target.value)}} required/>
+                        <Input style={{width:"100%",margin:"10px 0px 10px"}} placeholder="Пункт 7" defaultValue={point7} onChange={(e)=>{setPoint7(e.target.value)}} />
                         <br/>
-                        <Input style={{width:"100%",margin:"10px 0px 10px"}} placeholder="Пункт 8" defaultValue={point8} onChange={(e)=>{setPoint8(e.target.value)}} required/>
+                        <Input style={{width:"100%",margin:"10px 0px 10px"}} placeholder="Пункт 8" defaultValue={point8} onChange={(e)=>{setPoint8(e.target.value)}} />
                         <br/>
-                        <Input style={{width:"100%",margin:"10px 0px 10px"}} placeholder="Пункт 9" defaultValue={point9} onChange={(e)=>{setPoint9(e.target.value)}} required/>
+                        <Input style={{width:"100%",margin:"10px 0px 10px"}} placeholder="Пункт 9" defaultValue={point9} onChange={(e)=>{setPoint9(e.target.value)}} />
                         <br/>
-                        <Input style={{width:"100%",margin:"10px 0px 10px"}} placeholder="Пункт 10" defaultValue={point10} onChange={(e)=>{setPoint10(e.target.value)}} required/>
+                        <Input style={{width:"100%",margin:"10px 0px 10px"}} placeholder="Пункт 10" defaultValue={point10} onChange={(e)=>{setPoint10(e.target.value)}} />
                         <br/>
-                        <Input style={{width:"100%",margin:"10px 0px 10px"}} placeholder="Пункт 11" defaultValue={point11} onChange={(e)=>{setPoint11(e.target.value)}} required/>
+                        <Input style={{width:"100%",margin:"10px 0px 10px"}} placeholder="Пункт 11" defaultValue={point11} onChange={(e)=>{setPoint11(e.target.value)}} />
                         <br/>
-                        <Input style={{width:"100%",margin:"10px 0px 10px"}} placeholder="Заголовок першого блоку" defaultValue={titleBlock1} onChange={(e)=>{setTitleBlock1(e.target.value)}} required/>
+                        <Input style={{width:"100%",margin:"10px 0px 10px"}} placeholder="Заголовок першого блоку" defaultValue={titleBlock1} onChange={(e)=>{setTitleBlock1(e.target.value)}} />
                         <br/>
-                        <Input style={{width:"100%",margin:"10px 0px 10px"}} placeholder="Перший текст першого блоку" defaultValue={textBlock1} onChange={(e)=>{setTextBlock1(e.target.value)}} required/>
+                        <Input style={{width:"100%",margin:"10px 0px 10px"}} placeholder="Перший текст першого блоку" defaultValue={textBlock1} onChange={(e)=>{setTextBlock1(e.target.value)}} />
                         <br/>
-                        <Input style={{width:"100%",margin:"10px 0px 10px"}} placeholder="Другий текст першого блоку" defaultValue={textBlock12} onChange={(e)=>{setTextBlock12(e.target.value)}} required/>
+                        <Input style={{width:"100%",margin:"10px 0px 10px"}} placeholder="Другий текст першого блоку" defaultValue={textBlock12} onChange={(e)=>{setTextBlock12(e.target.value)}} />
                         <br/>
-                        <Input style={{width:"100%",margin:"10px 0px 10px"}} placeholder="Третій текст першого блоку" defaultValue={textBlock13} onChange={(e)=>{setTextBlock13(e.target.value)}} required/>
+                        <Input style={{width:"100%",margin:"10px 0px 10px"}} placeholder="Третій текст першого блоку" defaultValue={textBlock13} onChange={(e)=>{setTextBlock13(e.target.value)}} />
                         <br/>
-                        <Input style={{width:"100%",margin:"10px 0px 10px"}} placeholder="Четвертий текст першого блоку" defaultValue={textBlock14} onChange={(e)=>{setTextBlock14(e.target.value)}} required/>
+                        <Input style={{width:"100%",margin:"10px 0px 10px"}} placeholder="Четвертий текст першого блоку" defaultValue={textBlock14} onChange={(e)=>{setTextBlock14(e.target.value)}} />
                         <br/>
-                        <Input style={{width:"100%",margin:"10px 0px 10px"}} placeholder="П'ятий текст першого блоку" defaultValue={textBlock15} onChange={(e)=>{setTextBlock15(e.target.value)}} required/>
+                        <Input style={{width:"100%",margin:"10px 0px 10px"}} placeholder="П'ятий текст першого блоку" defaultValue={textBlock15} onChange={(e)=>{setTextBlock15(e.target.value)}} />
                         <br/>
-                        <Input style={{width:"100%",margin:"10px 0px 10px"}} placeholder="П'ятий текст першого блоку дата" defaultValue={textBlock15D} onChange={(e)=>{setTextBlock15D(e.target.value)}} required/>
+                        <Input style={{width:"100%",margin:"10px 0px 10px"}} placeholder="П'ятий текст першого блоку дата" defaultValue={textBlock15D} onChange={(e)=>{setTextBlock15D(e.target.value)}} />
                         <br/>
-                        <Input style={{width:"100%",margin:"10px 0px 10px"}} placeholder="Шостий текст першого блоку" defaultValue={textBlock16} onChange={(e)=>{setTextBlock16(e.target.value)}} required/>
+                        <Input style={{width:"100%",margin:"10px 0px 10px"}} placeholder="Шостий текст першого блоку" defaultValue={textBlock16} onChange={(e)=>{setTextBlock16(e.target.value)}} />
                         <br/>
-                        <Input style={{width:"100%",margin:"10px 0px 10px"}} placeholder="Шостий текст першого блоку дата" defaultValue={textBlock16D} onChange={(e)=>{setTextBlock16D(e.target.value)}} required/>
+                        <Input style={{width:"100%",margin:"10px 0px 10px"}} placeholder="Шостий текст першого блоку дата" defaultValue={textBlock16D} onChange={(e)=>{setTextBlock16D(e.target.value)}} />
                         <br/>
-                        <Input style={{width:"100%",margin:"10px 0px 10px"}} placeholder="Сьомий текст першого блоку" defaultValue={textBlock17} onChange={(e)=>{setTextBlock17(e.target.value)}} required/>
+                        <Input style={{width:"100%",margin:"10px 0px 10px"}} placeholder="Сьомий текст першого блоку" defaultValue={textBlock17} onChange={(e)=>{setTextBlock17(e.target.value)}} />
                         <br/>
-                        <Input style={{width:"100%",margin:"10px 0px 10px"}} placeholder="Сьомий текст першого блоку дата" defaultValue={textBlock17D} onChange={(e)=>{setTextBlock17D(e.target.value)}} required/>
+                        <Input style={{width:"100%",margin:"10px 0px 10px"}} placeholder="Сьомий текст першого блоку дата" defaultValue={textBlock17D} onChange={(e)=>{setTextBlock17D(e.target.value)}} />
                         <br/>
-                        <Input style={{width:"100%",margin:"10px 0px 10px"}} placeholder="Восьмий текст першого блоку" defaultValue={textBlock18} onChange={(e)=>{setTextBlock18(e.target.value)}} required/>
+                        <Input style={{width:"100%",margin:"10px 0px 10px"}} placeholder="Восьмий текст першого блоку" defaultValue={textBlock18} onChange={(e)=>{setTextBlock18(e.target.value)}} />
                         <br/>
-                        <Input style={{width:"100%",margin:"10px 0px 10px"}} placeholder="Дев'ятий текст першого блоку виділиний" defaultValue={textBlock19} onChange={(e)=>{setTextBlock19(e.target.value)}} required/>
+                        <Input style={{width:"100%",margin:"10px 0px 10px"}} placeholder="Дев'ятий текст першого блоку виділиний" defaultValue={textBlock19} onChange={(e)=>{setTextBlock19(e.target.value)}} />
                         <br/>
-                        <Input style={{width:"100%",margin:"10px 0px 10px"}} placeholder="Дев'ятий текст першого блоку " defaultValue={textBlock110} onChange={(e)=>{setTextBlock110(e.target.value)}} required/>
+                        <Input style={{width:"100%",margin:"10px 0px 10px"}} placeholder="Дев'ятий текст першого блоку " defaultValue={textBlock110} onChange={(e)=>{setTextBlock110(e.target.value)}} />
                         <br/>
-                        <Input style={{width:"100%",margin:"10px 0px 10px"}} placeholder="Заголовок другого блоку" defaultValue={titleBlock2} onChange={(e)=>{setTitleBlock2(e.target.value)}} required/>
+                        <Input style={{width:"100%",margin:"10px 0px 10px"}} placeholder="Заголовок другого блоку" defaultValue={titleBlock2} onChange={(e)=>{setTitleBlock2(e.target.value)}} />
                         <br/>
-                        <Input style={{width:"100%",margin:"10px 0px 10px"}} placeholder="Текст другого блоку" defaultValue={textBlock2} onChange={(e)=>{setTextBlock2(e.target.value)}} required/>
+                        <Input style={{width:"100%",margin:"10px 0px 10px"}} placeholder="Текст другого блоку" defaultValue={textBlock2} onChange={(e)=>{setTextBlock2(e.target.value)}} />
                         <br/>
                         <MuiFileInput
                             placeholder={placeholder1}
@@ -362,11 +362,11 @@ export default function Head(){
                             inputProps={{ accept: '.png, .jpeg, .jpg' }}
                         />
                         <br/>
-                        <Input style={{width:"100%",margin:"10px 0px 10px"}} placeholder="Заголовок третього блоку" defaultValue={titleBlock3} onChange={(e)=>{setTitleBlock3(e.target.value)}} required/>
+                        <Input style={{width:"100%",margin:"10px 0px 10px"}} placeholder="Заголовок третього блоку" defaultValue={titleBlock3} onChange={(e)=>{setTitleBlock3(e.target.value)}} />
                         <br/>
-                        <Input style={{width:"100%",margin:"10px 0px 10px"}} placeholder="Перший текст третього блоку" defaultValue={textBlock3} onChange={(e)=>{setTextBlock3(e.target.value)}} required/>
+                        <Input style={{width:"100%",margin:"10px 0px 10px"}} placeholder="Перший текст третього блоку" defaultValue={textBlock3} onChange={(e)=>{setTextBlock3(e.target.value)}} />
                         <br/>
-                        <Input style={{width:"100%",margin:"10px 0px 10px"}} placeholder="Другий текст третього блоку" defaultValue={textBlock32} onChange={(e)=>{setTextBlock32(e.target.value)}} required/>
+                        <Input style={{width:"100%",margin:"10px 0px 10px"}} placeholder="Другий текст третього блоку" defaultValue={textBlock32} onChange={(e)=>{setTextBlock32(e.target.value)}} />
                         <br/>
                         <MuiFileInput
                             placeholder={placeholder7}
@@ -382,7 +382,7 @@ export default function Head(){
                             inputProps={{ accept: '.png, .jpeg, .jpg' }}
                         />
                         <br/>
-                        <Input style={{width:"100%",margin:"10px 0px 10px"}} placeholder="Нижній текст" defaultValue={credo} onChange={(e)=>{setCredo(e.target.value)}} required/>
+                        <Input style={{width:"100%",margin:"10px 0px 10px"}} placeholder="Нижній текст" defaultValue={credo} onChange={(e)=>{setCredo(e.target.value)}} />
                         <div className={classes.seeMore}>
                             <Button type="submit">Відправити</Button>
                         </div>

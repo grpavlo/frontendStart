@@ -166,6 +166,7 @@ export default function WebinarOne(){
 
     return(
         <div className="main"  style={{backgroundColor:"#f3f5f9"}}>
+
             <Header/>
             <Snackbar   anchorOrigin={{  vertical: 'top', horizontal: 'right' }} open={openOk} autoHideDuration={6000} onClose={handleClose}>
                 <Alert onClose={handleCloseOk} severity="success" sx={{ width: '100%' }}>
@@ -180,7 +181,7 @@ export default function WebinarOne(){
                     <span className="pointsWebinar"><CheckIcon htmlColor="#ffffff" sx={{marginRight:2}}/>{point2}</span>
                     <span className="pointsWebinar"><CheckIcon htmlColor="#ffffff" sx={{marginRight:2}}/>{point3}</span>
                     <span className="pointsWebinar"><CheckIcon htmlColor="#ffffff" sx={{marginRight:2}}/>{point4}</span>
-                    <button className="contactsSubmit" onClick={handleOpen}>Зареєструватися</button>
+                    <button className="contactsSubmit" onClick={handleOpen}>Взяти участь у навчанні</button>
                 </div>
                 <div className="contentWebinarLeft">
                     <div className="contentWebinarLeftImg">
@@ -251,7 +252,7 @@ export default function WebinarOne(){
                 <br/>
                 <KeyboardDoubleArrowDownIcon  htmlColor={"#064881"} sx={{ fontSize: 60 }}/>
                 <br/>
-                <button className="bigButton" onClick={handleOpen}>Зареєструватися</button>
+                <button className="bigButton" onClick={handleOpen}>Взяти участь у навчанні</button>
                 <br/><br/>
                 <div>
                     <FacebookIcon style={{cursor:"pointer"}} onClick={()=>{window.open("https://www.facebook.com/groups/495706544896471/","_target")}} sx={{ fontSize: 100 }} htmlColor={"#064881"}/>
@@ -290,7 +291,7 @@ export default function WebinarOne(){
                             </Box>
                             <Box sx={cssModal.contentLeftRight}>
                                 {
-                                    positionForm?<Input sx={cssModal.input} type="text" placeholder="Посата"  onChange={(e)=>{setPosition(e.target.value)}}/>:<></>
+                                    positionForm?<Input sx={cssModal.input} type="text" placeholder="Посада"  onChange={(e)=>{setPosition(e.target.value)}}/>:<></>
                                 }
                                 {
                                     cityForm?<Input sx={cssModal.input} placeholder="Поштова адреса для відправлення документів" onChange={(e)=>{setCity(e.target.value)}}/>:<></>

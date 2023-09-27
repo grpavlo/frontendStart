@@ -17,6 +17,7 @@ import Values from "./values/values";
 import Collective from "./collective/collective";
 import Head from "./head/head";
 import Clients from "./clients/clients";
+import ServiceTwo from "./service/serviceTwo";
 
 const admin =<Admin/>
 const router = createBrowserRouter([
@@ -50,7 +51,7 @@ const router = createBrowserRouter([
     },
     {
         path: "/service",
-        element: <Service/>
+        element: <ServiceTwo/>
     },
     {
         path: "/articles",
