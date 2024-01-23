@@ -3,6 +3,8 @@ import Footer from "../footer/footer";
 import ArrowCircleUpIcon from '@mui/icons-material/ArrowCircleUp';
 import {useEffect, useState} from "react";
 import server from "../server";
+import { Helmet } from 'react-helmet';
+
 export default function Values(){
 
     const [placeholder,setPlaceholder] = useState("1")
@@ -71,6 +73,10 @@ export default function Values(){
     },[one])
     return(
         <div className="main" style={{background:"white"}}>
+	   <Helmet>
+        	<meta name="description" content="Історія компанії розпочалась у 2013 році, коли тодішній менеджер з аудиту міжнародної аудиторської компанії BDO та автор публікацій з МСФЗ провідних бухгалтерських видань Сергій РОГОЗНИЙ, прийняв рішення щодо започаткування власної справи. З того часу створювалась команда, нарощувався досвід, вивчались кращі практики та будувалися партнерські відносини. Активізація діяльності почалась у 2018 році, що дозволило вже у 2019 році вийти на провідні позиції у сегменті консалтингових компаній у сфері МСФЗ. Незадовго до цього набули чинності оновлення Закону України Про бухгалтерський облік та фінансову звітність в Україні, у звязку з чим кваліфікована допомога у впровадженні МСФЗ стала вкрай необхідною багатьом вітчизняним субєктам. Ми пишаємося тим, що за цей короткий термін впевнено здобули довіру наших клієнтів." />
+        	<meta name="keywords" content="ІСТОРІЯ, ЦІННОСТІ, НАША" />
+      </Helmet>
             <Header/>
 
             <div className="minContentValues">

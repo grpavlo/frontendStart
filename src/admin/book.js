@@ -38,6 +38,7 @@ export default function Book(){
     };
 
     function get(){
+
         fetch(server+"api/getByBook",{
             method: 'get',
             headers: {

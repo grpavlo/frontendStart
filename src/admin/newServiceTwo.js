@@ -23,6 +23,7 @@ import FormatListBulletedIcon from '@mui/icons-material/FormatListBulleted';
 import EditIcon from "@mui/icons-material/Edit";
 import PriorityHighIcon from '@mui/icons-material/PriorityHigh';
 import {MuiFileInput} from "mui-file-input";
+import TaskAltIcon from '@mui/icons-material/TaskAlt';
 
 let id = 0
 let idService
@@ -446,8 +447,8 @@ export default function NewServiceTwo(){
                             contentEditable={true}
                             onInput={handleInput}
                             style={{ border: '1px solid black', minHeight: '100px' , padding:"15px"}}>
-                        </div>
-                        <div className="servicesMainBlockText">
+			</div>
+                        <div style={{justifyContent:"flex-start"}} className="servicesMainBlockText">
                             <div dangerouslySetInnerHTML={{__html: mainText}}/>
                         </div>
                         <br/>
@@ -460,8 +461,8 @@ export default function NewServiceTwo(){
                             style={{ border: '1px solid black', minHeight: '100px' , padding:"15px"}}>
                         </div>
                         <div className="servicesGBlockText">
-                            <PriorityHighIcon/>
-                            <div className="servicesGBlockTextDiv" dangerouslySetInnerHTML={{__html: mainTextG}}/>
+                            <TaskAltIcon/>
+                            <div className="servicesGBlockTextDiv" style={{justifyContent:"flex-start"}}  dangerouslySetInnerHTML={{__html: mainTextG}}/>
                         </div>
                         <br/>
                         <Input  style={{width:"100%",margin:"10px 0px 10px"}} placeholder="Заголовок для блоку"  onChange={(e)=>{setPointsTitle(e.target.value)}} defaultValue={pointsTitle} />

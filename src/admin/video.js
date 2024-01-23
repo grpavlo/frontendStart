@@ -58,7 +58,26 @@ export default function Video(){
                     body: formData
                 })
                     .then(response => response.text())
+                    .then(() => {
 
+ fetch(server+'api/newVideo', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify({
+                        namePhoto,url,value
+                    })
+                })
+                    .then(response => response.text())
+                    .then(data => {
+                        document.getElementById("form").reset()
+                        setValue(null)
+                        get()
+                        setUrl("")
+                    })
+})
+/*
 
                 fetch(server+'api/newVideo', {
                     method: 'POST',
@@ -76,7 +95,7 @@ export default function Video(){
                         get()
                         setUrl("")
                     })
-
+*/
             }
         }else if(submitAndUpdate === "update"){
             editDB()

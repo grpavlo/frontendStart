@@ -3,8 +3,9 @@ import React from "react";
 import "../CSS/Main.css"
 import articlesMain from '../img/articlesMain.jpg'
 import video from '../img/videoMain.jpg'
-import calendar from '../img/calendarMain.png'
-    import book from "../img/bookMain.jpg"
+import calendar from '../img/photoLibrary2024.jpg'
+import book from "../img/bookMain.jpg"
+
 function Library() {
     return(
         <div className="library">
@@ -26,7 +27,7 @@ function Library() {
                 </div>
                 <div className="blockLibrary">
                     <img src={calendar} alt="library"/>
-                    <p>Календарі на робочий стіл 2023</p>
+                    <p>Календарі на робочий стіл 2024</p>
                     <button onClick={()=>(window.open("/Calendar"))}>Детальніше ></button>
                 </div>
             </div>

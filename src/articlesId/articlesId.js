@@ -1,3 +1,4 @@
+
 import Footer from "../footer/footer";
 import Header from "../header/Header";
 import le1 from "../img/le1.jpg"
@@ -48,7 +49,11 @@ export default function ArticlesId(){
     useEffect(()=>{
         get()
     },[one])
-
+/*
+<div className="lineFlex">
+                                <div className="lineBlack"/>
+                            </div>
+*/
     return(
         <div className="main">
             <Header/>
@@ -56,12 +61,12 @@ export default function ArticlesId(){
                 <span className="titleArticles">{title}</span>
                 <span className="subtitleArticles">{subtitle}</span>
             </div>
-            <div className="lineFlex">
+            <div style={{display:"none"}}  className="lineFlex">
                 <div className="lineBlack"/>
             </div>
             <div className="blockArticlesCenter">
                 <div className="blockArticlesMain">
-                    <img src={process.env.PUBLIC_URL+"/articlesid/"+value}/>
+                    <img src={process.env.PUBLIC_URL+"/Articlesid/"+value}/>
                     <div className="blockArticlesText">
                         <span className="ArticlesName">{titlePhoto}</span>
                         <span className="ArticlesTitle">{subtitlePhoto}</span>
@@ -80,14 +85,13 @@ export default function ArticlesId(){
                                 <QuestionMarkIcon sx={{fontSize:50,position:"absolute"}} htmlColor="#4B4F58"/>
 
                                 <div className="titleArticlesPoint">
-                                    {data}
+                                    
+				    <div dangerouslySetInnerHTML={{__html:data}} />
                                 </div>
-                                <span className="titleArticlesText">{rows.pointsText[index]}</span>
+                                <span className="titleArticlesText">
+<div dangerouslySetInnerHTML={{__html:rows.pointsText[index]}} />
+</span>
                             </div>
-                            <div className="lineFlex">
-                                <div className="lineBlack"/>
-                            </div>
-
                         </div>
                     </>
                 ))
@@ -95,6 +99,13 @@ export default function ArticlesId(){
 
             <br/>
             <br/>
+<div className="ArticleA">
+ <a href={subtitle} >
+<div dangerouslySetInnerHTML={{__html:title}} />
+</a>
+                <a href={subtitle} >Посилання джерело...</a>
+<br/>
+</div>
             <Footer/>
         </div>
     )

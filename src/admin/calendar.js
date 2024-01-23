@@ -57,8 +57,24 @@ export default function Calendar(){
                     body: formData
                 })
                     .then(response => response.text())
-
-
+		    .then(()=>{
+			fetch(server+'api/newCalendar', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify({
+                        namePhoto,value
+                    })
+                })
+                    .then(response => response.text())
+                    .then(data => {
+                        document.getElementById("form").reset()
+                        setValue(null)
+                        get()
+                    })
+			})
+/*
                 fetch(server+'api/newCalendar', {
                     method: 'POST',
                     headers: {
@@ -74,7 +90,7 @@ export default function Calendar(){
                         setValue(null)
                         get()
                     })
-
+*/
             }
         }else if(submitAndUpdate === "update"){
             editDB()

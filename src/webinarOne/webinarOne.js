@@ -204,7 +204,7 @@ export default function WebinarOne(){
                 </div>
                 <div className="blockInfoWebinar" >
                     <PaidIcon htmlColor="#102D5E" sx={{ fontSize: 40 }}/>
-                    <span>Ціна відеозапису</span>
+                    <span>Ціна участі</span>
                     <span>{price}</span>
                 </div>
                 <div className="blockInfoWebinar" >
@@ -246,7 +246,7 @@ export default function WebinarOne(){
                 </div>
             </div>
             <div className="textByWebinar">
-                <span>ПРИДБАТИ ВІДЕО ТА МАТЕРІАЛИ ВЕБІНАРУ МОЖНА ЗАРЕЄСТРУВАВШИСЬ ЗА ПОСИЛАННЯМ</span>
+                <span>Зареєструйтеся натиснувши на кнопку нижче</span>
                 <br/><br/>
                 <img src={logo}/>
                 <br/>

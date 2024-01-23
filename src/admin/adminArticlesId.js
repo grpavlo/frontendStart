@@ -74,8 +74,32 @@ export default function AdminArticlesId(){
                     body: formData
                 })
                     .then(response => response.text())
-
-
+		    .then(()=>{
+ fetch(server+'api/newArticlesId', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify({
+                        namePhoto,title,subtitle,titlePhoto,subtitlePhoto,pointDB
+                    })
+                })
+                    .then(response => response.text())
+                    .then(data => {
+                        document.getElementById("form").reset()
+                        setValue(null)
+                        pointTitle = []
+                        pointsText = []
+                        countPoint = 1
+                        setPoint([])
+                        setPointText([])
+                        setTitlePhoto("")
+                        setSubtitlePhoto("")
+                        setSubtitle("")
+                        get()
+                    })
+		})
+/*
 
                 fetch(server+'api/newArticlesId', {
                     method: 'POST',
@@ -100,7 +124,7 @@ export default function AdminArticlesId(){
                         setSubtitle("")
                         get()
                     })
-
+*/
             }
         }else if(submitAndUpdate === "update"){
             editDB()
@@ -120,7 +144,7 @@ export default function AdminArticlesId(){
                 setRows(data.map((row,index) => (
                     <TableRow key={row.id}>
                         <TableCell>{index+1}</TableCell>
-                        <TableCell><CardImg src={process.env.PUBLIC_URL+"/ArticlesId/"+row.namephoto}></CardImg></TableCell>
+                        <TableCell><CardImg src={process.env.PUBLIC_URL+"/Articlesid/"+row.namephoto}></CardImg></TableCell>
                         <TableCell>{row.title}</TableCell>
                         <TableCell>{row.url}</TableCell>
                         <TableCell>
@@ -286,11 +310,11 @@ export default function AdminArticlesId(){
         <>
             <Grid item xs={12}>
                 <Paper className={classes.paper}>
-                    <Title>Вебінари</Title>
+                    <Title>Зміст</Title>
                     <form id="form" style={{width:"100%"}} key={idFrom}>
-                        <Input id="input" style={{width:"100%",margin:"10px 0px 10px"}}  placeholder="Заголовок *" onChange={(e)=>{setTitle(e.target.value)}} defaultValue={title}/>
+                        <Input id="input" style={{width:"100%",margin:"10px 0px 10px"}}  placeholder="Текст для посилання *" onChange={(e)=>{setTitle(e.target.value)}} defaultValue={title}/>
                         <br/>
-                        <Input id="input" style={{width:"100%",margin:"10px 0px 10px"}}  placeholder="Під заголовок *" onChange={(e)=>{setSubtitle(e.target.value)}} defaultValue={subtitle}/>
+                        <Input id="input" style={{width:"100%",margin:"10px 0px 10px"}}  placeholder="Посилання *" onChange={(e)=>{setSubtitle(e.target.value)}} defaultValue={subtitle}/>
                         <br/>
                         <MuiFileInput
                             placeholder={placeholder}
@@ -366,7 +390,7 @@ export default function AdminArticlesId(){
             </Grid>
             <Grid item xs={12}>
                 <Paper className={classes.paper}>
-                    <Title>Партнери</Title>
+                    <Title>Зміст підпункта</Title>
                     <Table size="small">
                         <TableHead>
                             <TableRow>

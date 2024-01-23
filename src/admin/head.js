@@ -79,58 +79,103 @@ export default function Head(){
     const [value7, setValue7] = useState(null);
     const [value8, setValue8] = useState(null);
 
-    const handleChange = (newValue) => {
-        namePhoto0=newValue.name
-        setPlaceholder(namePhoto0)
+const handleChange = (newValue) => {
         setValue0(newValue);
+        if(newValue !== null){
+            namePhoto0=newValue.name
+            setPlaceholder(namePhoto0)
+        }else{
+            namePhoto0=""
+            setPlaceholder(namePhoto0)
+        }
+
     };
-    const handleChange1 = (newValue1) => {
-        namePhoto1=newValue1.name
-        setPlaceholder1(namePhoto1)
+const handleChange1 = (newValue1) => {
         setValue1(newValue1);
+        if(newValue1 !== null){
+            namePhoto1=newValue1.name
+            setPlaceholder1(namePhoto1)
+        }else{
+            namePhoto1=""
+            setPlaceholder1(namePhoto1)
+        }
     };
     const handleChange2 = (newValue2) => {
-        namePhoto2=newValue2.name
-        setPlaceholder2(namePhoto2)
         setValue2(newValue2);
+        if(newValue2 !== null){
+            namePhoto2=newValue2.name
+            setPlaceholder2(namePhoto2)
+        }else{
+            namePhoto2=""
+            setPlaceholder2(namePhoto2)
+        }
     };
 
     const handleChange3 = (newValue3) => {
-        namePhoto3=newValue3.name
-        setPlaceholder3(namePhoto3)
         setValue3(newValue3);
+        if(newValue3 !== null){
+            namePhoto3=newValue3.name
+            setPlaceholder3(namePhoto3)
+        }else{
+            namePhoto3=""
+            setPlaceholder3(namePhoto3)
+        }
     };
 
     const handleChange4 = (newValue4) => {
-        namePhoto4=newValue4.name
-        setPlaceholder4(namePhoto4)
         setValue4(newValue4);
+        if(newValue4 !== null){
+            namePhoto4=newValue4.name
+            setPlaceholder4(namePhoto4)
+        }else{
+            namePhoto4=""
+            setPlaceholder4(namePhoto4)
+        }
     };
 
     const handleChange5 = (newValue5) => {
-        namePhoto5=newValue5.name
-        setPlaceholder5(namePhoto5)
         setValue5(newValue5);
+        if(newValue5 !== null){
+            namePhoto5=newValue5.name
+            setPlaceholder5(namePhoto5)
+        }else{
+            namePhoto5=""
+            setPlaceholder5(namePhoto5)
+        }
     };
 
     const handleChange6 = (newValue6) => {
-        namePhoto6=newValue6.name
-        setPlaceholder6(namePhoto6)
         setValue6(newValue6);
+        if(newValue6 !== null){
+            namePhoto6=newValue6.name
+            setPlaceholder6(namePhoto6)
+        }else{
+            namePhoto6=""
+            setPlaceholder6(namePhoto6)
+        }
     };
 
     const handleChange7 = (newValue7) => {
-        namePhoto7=newValue7.name
-        setPlaceholder7(namePhoto7)
         setValue7(newValue7);
+        if(newValue7 !== null){
+            namePhoto7=newValue7.name
+            setPlaceholder7(namePhoto7)
+        }else{
+            namePhoto7=""
+            setPlaceholder7(namePhoto7)
+        }
     };
 
     const handleChange8 = (newValue8) => {
-        namePhoto8=newValue8.name
-        setPlaceholder8(namePhoto8)
         setValue8(newValue8);
+        if(newValue8 !== null){
+            namePhoto8=newValue8.name
+            setPlaceholder8(namePhoto8)
+        }else{
+            namePhoto8=""
+            setPlaceholder8(namePhoto8)
+        }
     };
-
     const classes = useStyles();
 
 

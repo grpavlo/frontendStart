@@ -1,0 +1,3112 @@
+G@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
+:root{
+    --main-bg-color: #ffffff;
+    --main-font-family: 'IBM Plex Sans', sans-serif;
+    --main-header-height: 70px;
+    --main-color-blue:#064881;
+}
+
+button{
+    cursor: pointer;
+}
+
+html{
+    background-image:  url("../img/1.png");
+}
+
+body{
+    background: var(--main-bg-color);
+    font-family: var(--main-font-family);
+    font-size: 20px;
+}
+
+.HeaderBar{
+    width: 100%;
+    height: var(--main-header-height);
+    background: var(--main-color-blue);
+    display: flex;
+}
+
+.FooterBar{
+    width: 100%;
+    height: var(--main-header-height);
+    background: var(--main-color-blue);
+    display: flex;
+}
+
+.divImgLogo{
+    width: 25%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.ImgLogo{
+    cursor: pointer;
+    width: 160px;
+    height: 30px;
+}
+
+.pointsBar{
+    width: 75%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.footersBar{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.pointBar,.footerBar{
+    color: white;
+    cursor: pointer;
+    font-weight: 600;
+    margin-right: 2%;
+    font-size: 18px;
+}
+
+.pointFooter{
+    color: white;
+    cursor: pointer;
+    font-weight: bold;
+    margin-right: 50px;
+}
+
+
+.menuBar{
+    visibility: hidden;
+   display: none;
+    z-index: 1;
+}
+
+.menuBarPoints{
+    position: fixed;
+    right: 0;
+    top: 0;
+    z-index: 1;
+    background-color: var(--main-color-blue);
+    width: 35%;
+    height: 100%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+
+    transform: translateX(150%);
+    animation: ani 1s forwards;
+}
+
+@keyframes ani  {
+    0% {transform: translateX(150%);}
+    100% {transform: translateY(0);}
+}
+
+@keyframes ani2  {
+    100% {transform: translateX(150%);}
+    0% {transform: translateY(0);}
+}
+
+.point{
+    cursor: pointer;
+    color: white;
+    font-size: 20px;
+    font-weight: 300;
+    margin-bottom: 30px;
+}
+
+.menuBarPoint{
+    margin-left: 100px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-content: flex-start;
+
+}
+
+.carouselMain{
+    width: 100%;
+    height: 600px;
+    margin-bottom: 10px;
+}
+
+.main{
+    width: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+.carouselButton{
+    width: 100%;
+}
+
+.carouselList{
+    cursor: grab;
+    width: 100%;
+    height: 600px;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.carouselListLeft{
+    margin-left: 5% ;
+    width: 30%;
+    height: 600px;
+}
+
+.carouselListLeftYellow{
+    margin-left: 5% ;
+    width: 30%;
+    height: 600px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.carouselListRight{
+    margin-right: 5% ;
+    max-width: 30%;
+    height: 500px;
+    margin-top: 50px;
+}
+
+.carouselListRightNo{
+    margin-top: 20px;
+    max-width: 60%;
+    height: 500px;
+    margin-bottom: 5px;
+}
+
+.carouselListLeftTitle{
+    color: white;
+    font-size: 170%;
+    line-height: 1.5;
+    font-weight: 700;
+    margin-bottom: 5px;
+}
+
+.carouselListLeftTitleYellow{
+    color: #fff201;
+    font-size: 120%;
+    line-height: 1.5;
+    font-weight: 100;
+    margin-bottom: 5px;
+}
+
+.carouselListLeftSubtitle{
+    color: #1d489e;
+    background: white;
+    border-radius: 100px;
+    line-height: 1.5;
+    font-weight: 700;
+    letter-spacing: 2px;
+    font-size: 87.5%;
+    border-color: rgba(255, 255, 255, 0);
+    padding: 5px 15px;
+    cursor: none;
+}
+
+.carouselListLeftSubtitleYellow{
+    color: #ffffff;
+    background: rgba(255, 255, 255, 0.18);
+    border-radius: 100px;
+    line-height: 1.5;
+    font-weight: 100;
+    letter-spacing: 2px;
+    font-size: 75%;
+    border-color: rgba(255, 255, 255, 0);
+    padding: 5px 0px;
+    width: 300px;
+}
+
+
+.carouselListLeftMainText{
+    color: white;
+    font-size: 90%;
+    line-height: 1.6;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    font-weight: 200;
+}
+
+.carouselListLeftMainTextYellow{
+    color: white;
+    font-size: 112.5%;
+    line-height: 1.6;
+    margin-bottom: 50px;
+    font-weight: 200;
+}
+
+.carouselListLeftButton{
+    width: 200px;
+    border-radius: 100px;
+    background: #1d489e;
+    border-color: rgba(29, 72, 158, 0);
+    color: white;
+    font-size: 87.5%;
+    line-height: 1.5;
+    letter-spacing: 2px;
+    padding: 5px 15px;
+    cursor: pointer;
+}
+
+.carouselListLeftButtonYellow{
+    width: 150px;
+    height: 50px;
+    border-radius: 100px;
+    background: #ffe201;
+    border-color: rgba(29, 72, 158, 0);
+    color: #1d489e;
+    font-size: 87.5%;
+    line-height: 1.5;
+    letter-spacing: 2px;
+    padding: 5px 15px;
+    cursor: pointer;
+}
+
+.carouselListNoPhoto{
+    cursor: grab;
+    width: 100%;
+    height: 600px;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    flex-wrap: wrap;
+}
+
+.textMini{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+.textMiniWebinar{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: white;
+    margin: 0 0 30px 0;
+}
+
+.textMini a{
+    font-weight: 700;
+}
+
+.textMini span{
+    font-weight: 700;
+}
+
+.webinar, .services, .library,.partners,.contacts{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin: 50px 0 150px;
+}
+
+.partners,.contacts{
+    background-color: white;
+
+}
+
+.partners{
+    padding-top: 40px;
+}
+
+.servicesContainer,.libraryContainer,.contactsContainer{
+    width: 90%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    /*justify-content: space-evenly;*/
+}
+
+.contactsContainer{
+    justify-content: center;
+}
+
+.partnersContainer{
+    width: 90%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.webinarContainer{
+    width: 90%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+}
+
+
+
+.block {
+    width: calc(33.33% - 20px);
+    margin-bottom: 20px;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.blockServices,.blockLibrary {
+    width: calc(25% - 20px);
+    margin-bottom: 20px;
+    padding: 10px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    position: relative;
+    overflow: hidden;
+}
+
+.blockContacts{
+    width: calc(50% - 20px);
+    margin-bottom: 20px;
+    padding: 10px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    position: relative;
+    overflow: hidden;
+}
+
+.blockPartners {
+    width: calc(25% - 20px );
+    margin: 0 5px 20px 5px;
+    height: 160px;
+    border-radius: 20px;
+    position: relative;
+    overflow: hidden;
+
+}
+
+.base-image, .top-image{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transition: opacity 0.3s, transform 0.1s;
+    transform-origin: top center;
+    display: table;
+}
+
+.base-image {
+    opacity: 1;
+    transform: translateY(0);
+    transition: opacity 0.1s, transform 0s;
+}
+
+.top-image {
+    opacity: 0;
+    transform: translateY(-100%);
+    transition: opacity 0.1s, transform 0s;
+}
+
+.blockPartners:hover .base-image {
+    opacity: 0;
+    transform: translateY(100%);
+}
+
+.blockPartners:hover .top-image {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.white{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    background-color: #ffffff;
+    opacity: 0.88;
+    transition: opacity 0.3s, transform 0.3s;
+}
+
+
+.blockPartners:hover .white {
+    transition: opacity 0.3s, transform 0.3s,background-color 0.9s;
+    background-color: #000000;
+    opacity: 0.59;
+}
+
+.blue{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    background-color: #000000;
+    opacity: 0.59;
+    transition: opacity 0.3s, transform 0.3s,background-color 0s;
+}
+
+
+.blockPartners:hover .blue {
+    transition: opacity 0.3s, transform 0.3s,background-color 0.9s;
+    background-color: #ffffff;
+
+    opacity: 0.88;
+}
+
+.white img,.blue img{
+    max-width: 80px;
+    max-height: 80px;
+    cursor: pointer;
+}
+
+.partnersText{
+    line-height: 1.5em;
+    color: black;
+    width: 100%;
+    text-align: center;
+    margin: 75px 0 200px;
+    font-weight: 500;
+    font-size: 25px;
+}
+
+.block p,.blockServices p,.blockLibrary p{
+    color: #3a3a3a;
+    font-weight: 700;
+}
+
+.block button,.blockServices button{
+    border-color: rgba(29, 72, 158, 0);
+    font-size: 13px;
+    font-weight: 600;
+    line-height: 16px;
+    background-color: #B40A1B;
+    border-radius: 7px ;
+    color: white;
+    padding: 10px 20px 10px 20px;
+}
+
+.blockLibrary button{
+    border-color: rgba(29, 72, 158, 0);
+    font-size: 13px;
+    font-weight: 600;
+    line-height: 16px;
+    background-color: #102D5E;
+    border-radius: 7px ;
+    color: white;
+    padding: 10px 20px 10px 20px;
+}
+
+.block img, .blockServices img{
+    width: 100%;
+}
+
+.block img{
+    width: 80%;
+}
+
+.servicesText{
+    font-size:35px;
+    color:#102D5E;
+    font-weight:bold;
+    letter-spacing: -0.9px;
+}
+
+.servicesTextWebinar{
+    width: 50%;
+    font-size:30px;
+    color:#1d489e;
+    font-weight:600;
+    letter-spacing: -0.9px;
+    text-align: center;
+    margin: 80px 0 15px 0;
+}
+
+.about {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    padding: 20px;
+    justify-content: space-evenly;
+}
+
+.imgAbout{
+    width: 80%;
+}
+
+
+
+.aboutBlock {
+    padding: 10px;
+    box-sizing: border-box;
+    margin-right: 20px;
+    flex-basis: calc(33.33% - 20px);
+    margin-bottom: 20px;
+}
+
+.block1,
+.block2,
+.block3 {
+    width: 100%;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 5px;
+}
+
+.aboutText{
+    font-size:30px;
+    color:#102D5E;
+    font-weight:600;
+    letter-spacing: -0.9px;
+    text-align: center;
+}
+
+.block1 h1{
+    font-size:40px;
+
+}
+
+.subBlock1,.subBlock2,.subBlock3,.subBlock4{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.block2Button{
+    background: rgba(255, 255, 255, 0);
+    border: 1px solid #102D5E;
+    color: #102D5E;
+    padding: 10px 20px 10px 20px;
+    border-radius: 5px;
+    font-size:15px;
+    font-weight:600;
+    margin-bottom: 35px;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.block2Button:hover {
+    background-color: #102D5E;
+    transform: translateY(-5px);
+    color:white;
+}
+
+.block3Button{
+    background: rgba(255, 255, 255, 0);
+    border: 1px solid #102D5E;
+    color: #ffffff;
+    background: #102D5E;
+    padding: 10px 20px 10px 20px;
+    border-radius: 5px;
+    font-size:15px;
+    font-weight:600;
+    margin-bottom: 35px;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.block3Button:hover {
+    background-color: #102D5E;
+    transform: translateY(-5px);
+    color:white;
+}
+
+.contactsTitle{
+    font-size: 60px;
+    letter-spacing: 0.4px;
+    font-weight: 500;
+    color: #102D5E;
+}
+
+.contactsContact{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.contactsContact span{
+    padding: 10px;
+}
+
+.contactsTitleBlue{
+    font-size: 16px;
+    text-transform: uppercase;
+    color: #064881;
+    font-weight: 600;
+}
+
+.contactsTitleStandard{
+    font-size: 19px;
+    font-weight: 400;
+    line-height: 26px;
+    color: black;
+}
+
+.contactsInput{
+    padding: 10px;
+    width: 95%;
+    height: 40px;
+    background-color: white;
+    color: #1d489e;
+    border-radius: 5px;
+    border-color: rgba(0, 0, 0, 0.46);
+    border-width: 1px;
+    margin-bottom: 20px;
+    font-size: 15px;
+    font-weight: 200;
+}
+
+.contactsInput::placeholder{
+    color: #1d489e;
+    font-size: 15px;
+    font-weight: 600;
+}
+
+.contactsSubmit{
+    width: 250px;
+    color: white;
+    background-color: #064881;
+    border-radius: 55px 55px 55px 55px;
+    padding: 14px 28px 14px 28px;
+    margin-top: 15px;
+    font-size: 15px;
+    font-weight: 600;
+    letter-spacing: 0.7px;
+    border-color: rgba(0, 0, 0, 0);
+}
+
+.map{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin: 50px 0 150px;
+}
+
+.map iframe{
+    width: 90%;
+    height: 530px;
+    border-color: rgba(29, 72, 158, 0);
+}
+
+.bookTop{
+    width: 100%;
+    display: flex;
+}
+
+.bookTop img{
+    width: 25%;
+    height: 1%;
+    margin: 10% 0 0  10%;
+}
+
+.bookTopRight{
+    margin: 10% 10% 0  15%;
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.bookPrice{
+    font-weight: 600;
+}
+
+.bookName{
+    font-size: 13px;
+}
+
+.bookName span{
+    color: var(--main-color-blue);
+    font-size: 15px;
+}
+
+.bookText{
+    font-weight: 300;
+    font-size: 17px;
+}
+
+.bookBottom{
+    display: flex;
+    width: 100%;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.bookBottomContent{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 40%;
+    margin-left: 10%;
+}
+
+.bookTitle{
+    color: #102D5E;
+    font-weight: 500;
+    margin-bottom: 15px;
+}
+
+.bookSubText{
+    color:  #54595F;
+    font-size: 15px;
+    font-weight: 400;
+}
+
+.bookSubTitle{
+    color: #54595F;
+    font-size: 15px;
+    font-weight: 700;
+}
+
+.line{
+    width: 7%;
+    height: 3px;
+    background-color: #6EC1E4;
+    margin: 0 0 80px 0;
+}
+
+.responseWebinar{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 100%;
+    height: 350px;
+    margin: 0 0 30px 0;
+}
+
+.responseWebinar img{
+    max-width: 45%;
+    height: 100%;
+}
+
+.responseWebinar div{
+    border: solid 1px rgba(84, 89, 95, 0.07);
+    width: calc(45% - 40px);
+    background-color: white;
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding-left: 40px;
+}
+
+.responseWebinar button{
+    border-color: rgba(29, 72, 158, 0);
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 16px;
+    border-radius: 7px ;
+    color: white;
+    padding: 10px 20px 10px 20px;
+    margin: 0  0 15px 0;
+    background-color: #064881;
+
+}
+
+.webinarResponseTitle{
+    color: #064881;
+    font-weight: 600;
+    font-size: 20px;
+    margin: 0  0 15px 0;
+}
+
+.webinarResponseText{
+    font-size: 14px;
+    color: #54595F;
+    line-height: 1.6em;
+}
+
+.webinarResponseLink{
+    cursor: pointer;
+    font-size: 14px;
+    color: #064881;
+    font-weight: 500;
+}
+
+.titleWebinar{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 200px;
+    margin: 80px 0 0 0;
+}
+
+.titleWebinarName{
+    color: #064881;
+    font-size: 14px;
+    margin-bottom: 15px;
+}
+
+.titleWebinarTitle{
+    color: #064881;
+    font-size: 30px;
+    font-weight: 500;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.titleWebinarSubtitle{
+    font-size: 18px;
+    color: #54595F;
+    margin-bottom: 15px;
+    font-weight: 300;
+    text-align: center;
+}
+
+.allWebinar{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.allWebinarYears{
+    text-align: center;
+    color: #4B4F58;
+    font-weight: 600;
+    font-size: 30px;
+}
+
+.oneWebinar{
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    height: 250px;
+    justify-content: space-evenly;
+    margin: 50px 0 50px 0;
+    background-color: white;
+    padding: 15px 0 15px 0;
+    align-items: center;
+}
+
+
+
+.imgOneWebinar{
+    width: 35%;
+    height: 107%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+.imgOneWebinar img{
+    height: 100%;
+}
+
+.contentOneWebinar{
+    width: 55%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.webinarHeader{
+    background: #062636E6;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 50px 0 50px 0;
+}
+
+.contentWebinarRight{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-left: 10%;
+}
+
+.contentWebinarLeft{
+    width: 35%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.topic{
+    color: #ffffff;
+    font-size: 35px;
+    font-weight: 600;
+}
+
+.pointsWebinar{
+    width: auto;
+    color: #ffffff;
+    font-weight: 200;
+    font-size: 25px;
+    margin-bottom: 10px;
+}
+
+.contentWebinarLeftImg{
+    width: 80% ;
+    border-left: solid white ;
+    border-left-width: 5px ;
+    padding: 40px;
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
+}
+
+.contentWebinarLeftImg img{
+    border-radius: 15px;
+    width: 110%;
+}
+
+.lecturerNameWebinar{
+    color: white;
+    font-weight: 500;
+    font-size: 35px;
+    margin-top: 10px;
+}
+
+.infoWebinar{
+    display: flex;
+    width: calc(100% - 100px);
+    margin: 30px 0 30px 0;
+    padding: 0 50px 100px 50px;
+}
+
+.blockInfoWebinar{
+    width: calc(25% - 20px);
+    height: 200px;
+    background: white;
+    margin: 0 10px 0 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content:center;
+    border-radius: 10px;
+    border-bottom: 5px solid #102D5E;
+}
+
+.participationWebinar{
+    width: calc(100% - 20px);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    align-content: center;
+    margin-left: 20px;
+}
+
+.blockInfoWebinar span{
+    font-weight: 500;
+    color: #102D5E;
+}
+
+.textParticipationWebinar{
+    color: #102D5E;
+    font-size: 30px;
+    font-weight: 600;
+    margin-bottom: 25px;
+}
+
+.lineVertical{
+    height: 30px;
+    width: 3px;
+    background: #6EC1E4;
+    position: absolute;
+}
+
+.container{
+    padding-left: 30px;
+    margin: 25px 25px 25px 0;
+}
+
+.container span{
+    font-weight: 500;
+    color: #102D5E;
+}
+
+.pointsParticipationWebinar{
+    padding: 15px;
+}
+
+.lecturersWebinar{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    margin: 50px 0 50px 0;
+}
+
+.lecturersWebinarTwo{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+.lecturersWebinarOne{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 30%;
+}
+
+.lineBlue{
+    background: #102D5E;
+    width: 70%;
+    height: 2px;
+}
+
+.lecturersWebinarOne img{
+    width: 80%;
+    margin-bottom: 15px;
+}
+
+.nameLecturer{
+    color: #1d489e;
+    font-weight: 600;
+    margin-bottom: 15px;
+    font-size: 25px;
+}
+
+.textLecturer{
+    color: #000000;
+    font-weight: 600;
+    margin-bottom: 15px;
+    text-align: center;
+    font-size: 17px;
+    padding-left: 10px;
+}
+
+.programWebinar{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 50px;
+}
+
+.programWebinarContent{
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+}
+
+.programWebinarContentTest{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.programName{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    background: rgba(110, 193, 228, 0.13);
+}
+
+.programName span{
+    margin: 20px 0 20px 0;
+    text-align: center;
+    font-weight: 700;
+    font-size: 35px;
+    color: #102D5E;
+}
+
+.programWebinarContentOne{
+    padding-top: 15px;
+    width: 100%;
+    background: rgba(110, 193, 228, 0.13);
+}
+
+.programWebinarContentOneTitle{
+    padding-left: 15px;
+    color: #102D5E;
+    font-weight: 600;
+    font-size: 25px;
+}
+
+.programPoint {
+    list-style: none;
+}
+
+.programPoint li::before {
+    content: "\2022";
+    color: #4B4F58;
+    margin-left: 10px;
+    display: inline-block;
+    width: 20px;
+}
+
+.programPoint li{
+    color: #102D5E;
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+
+.programWebinarContentOneSubTitle{
+    padding-left: 15px;
+    color: #102D5E;
+    font-weight: 600;
+    font-size: 25px;
+    font-style:oblique;
+    margin-bottom: 20px;
+}
+
+.textByWebinar{
+    width: 100%;
+    padding: 100px 0 100px 0;
+    background: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.bigButton{
+    width: 30%;
+    color: white;
+    background-color: #064881;
+    border-radius: 55px 55px 55px 55px;
+    padding: 14px 28px 14px 28px;
+    margin-top: 15px;
+    font-size: 25px;
+    font-weight: 600;
+    letter-spacing: 0.7px;
+    border-color: rgba(0, 0, 0, 0);
+}
+
+.textByWebinar span{
+    color: #1d489e;
+    font-size: 35px;
+    font-weight: 600;
+    width: 70%;
+    text-align: center;
+}
+
+
+.serviceBlock{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    height: 350px;
+    padding: 5% 0 5% 0;
+}
+
+.colorService{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction:column;
+    width: 90%;
+    height: 90%;
+    background-image: linear-gradient(180deg, #1b95aa 0%, #243980 79%);
+    border-radius: 20px;
+}
+
+.colorServiceTitle{
+    font-size: 190%;
+    color: white;
+}
+.colorServiceSubTitle{
+    font-size: 20px;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+
+.pointsBlocService{
+    margin-top: 50px;
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 50px;
+    background: white;
+    padding: 100px 0 100px 0;
+}
+
+.pointsBlocServiceTitle{
+    font-size: 180%;
+    margin-bottom: 30px;
+    font-weight: 700;
+    text-align: center;
+}
+
+.pointsBlocServiceMain{
+    display: flex;
+    width: 90%;
+    justify-content: space-around;
+}
+
+.pointsService{
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+
+}
+
+
+.textService{
+    width: 55%;
+    font-size: 18px;
+    font-weight: 300;
+}
+
+.pointsOneService{
+    height: 70px;
+    display: flex;
+    align-items: center;
+    background: white;
+    color:#54595F;
+    padding-left: 10px;
+    font-size: 15px;
+}
+
+.pointsOneService:hover{
+    background-color: #6EC1E4;
+    color: white;
+}
+
+.mainContentService{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    padding: 100px 0 100px 0;
+
+}
+
+.mainContentServiceTitle{
+    font-size: 25px;
+    text-align: center;
+}
+
+.mainContentServiceTitleLine{
+    width: 5%;
+    height: 3px;
+    background-color: #4B4F58;
+    margin-left: 10%;
+}
+
+.mainContentServiceMain{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+}
+
+.mainContentServiceMainPoints{
+    display: flex;
+    width: 90%;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.mainContentServicePoint{
+    width: calc(33% - 40px);
+    color: #4B4F58;
+    display: flex;
+    padding-bottom:20px ;
+    padding-left: 20px;
+}
+
+.mainContentServicePoint span{
+    padding-left: 20px;
+    font-weight: 700;
+}
+
+.endContentService{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 100px 0 100px 0;
+    background-color: white;
+    padding: 100px 0 100px 0;
+
+}
+
+.endContentServiceTwo{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 100px 0 100px 0;
+
+}
+
+.lineService{
+    width: 40%;
+    height: 1px;
+    background-color: #4B4F58;
+    margin-bottom: 50px;
+    margin-top: 50px;
+}
+
+.endContentService span{
+    font-weight: 600;
+    font-size: 30px;
+    text-align: center;
+    width: 70%;
+    color: #4B4F58;
+}
+
+.mainArticles{
+    width: 100%;
+    display: flex;
+    flex-wrap:wrap;
+    margin-bottom: 90vh;
+}
+
+.componentArticles{
+    width: calc(25% - 50px);
+    display: flex;
+    flex-direction: column;
+    margin: 25px;
+}
+
+.componentArticles span{
+    font-size: 30px;
+    font-weight: 600;
+}
+
+.componentArticles button{
+    color: white;
+    background-color: #0170B9;
+    width: 100%;
+    padding: 10px 25px;
+    border: rgba(29, 72, 158, 0);
+    margin-bottom: 15px;
+}
+
+.blockArticlesTop{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    margin: 50px 0 50px 0 ;
+    padding: 300px 0 300px 0;
+}
+
+.titleArticles{
+    font-size: 50px;
+    margin-right: 15px;
+    font-weight: 600;
+    width: 30%;
+    text-align: left;
+    color: #1d489e;
+}
+
+.subtitleArticles{
+    width: 30%;
+    text-align: left;
+}
+
+.lineBlack{
+    width: 70%;
+    height: 1px;
+    background-color: black;
+    margin-bottom: 35px;
+}
+
+.blockArticlesCenter{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    background-color: #F6F9FF;
+}
+
+.blockArticlesMain{
+    width: 50%;
+    display: flex;
+    align-items: flex-start;
+    padding: 25px 0 25px 0;
+}
+
+.blockArticlesMain img{
+    width: calc(25% - 15px);
+    margin-right: 15px;
+}
+
+.blockArticlesText{
+    display: flex;
+    flex-direction: column;
+}
+
+.ArticlesName{
+    color: #1d489e;
+    font-weight: 700;
+    font-size: 40px;
+}
+
+.ArticlesTitle{
+    color: #4B4F58;
+    font-weight: 400;
+    font-size: 17px;
+}
+
+.contentArticles{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #F6F9FF;
+    padding-top: 50px;
+
+}
+
+.pointArticles{
+    width: 55%;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 25px;
+}
+
+.titleArticlesPoint{
+    font-weight: 400;
+    color: #1d489e;
+    font-size: 18px;
+    margin-left: 50px;
+}
+
+.titleArticlesText{
+    font-weight: 400;
+    color: #54595F;
+    font-size: 18px;
+    width: 100%;
+    margin: 10px 0 10px 50px;
+}
+
+.lineFlex{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+}
+
+.lineFlexR{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+.mainContentVideo{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 90vh;
+}
+
+.flexContentVideo{
+    width: 70%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.video{
+    width: calc(25% - 20px);
+    margin: 20px 20px 0 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.video button{
+    background-color:#04394F;
+    padding: 15px 20px 15px 20px;
+    color: white;
+    border: rgba(29, 72, 158, 0);
+}
+
+.mainContentCalendar{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 90vh;
+}
+
+.componentContentCalendar{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 70%;
+    margin-bottom: 25px;
+}
+
+.photoCalendar{
+    width: calc(33.33% - 20px);
+    margin: 20px 20px 20px   0;
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+
+}
+
+.photoCalendar a{
+    display: inline-block;
+    text-decoration: none;
+    background-color: #066790;
+    padding: 15px 20px 15px 20px;
+    color: white;
+    border: rgba(29, 72, 158, 0);
+}
+
+.contentResponse{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    background-color: rgba(243, 243, 243, 0.68);
+}
+
+.componentResponse{
+    display: flex;
+    flex-wrap: wrap;
+    width: 50%;
+    margin: 100px 0;
+}
+
+.pointResponse{
+    width: calc(50% - 50px);
+    margin-right: 50px;
+    margin-bottom: 200px;
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+
+
+}
+
+.miniTitle{
+    color: #6EC1E4;
+    font-size: 10px;
+}
+
+.titleResponse{
+    font-size: 45px;
+    font-weight: 700;
+    color: #1d489e;
+}
+
+.subtitleResponse{
+    font-size: 15px;
+    color: #54595F;
+    font-weight: 500;
+}
+
+.titleResponseCard{
+    color: #1d489e;
+    margin-top: 20px;
+    margin-left: 20px;
+    font-weight: 600;
+}
+
+.lineResponseCard{
+    width: 50px;
+    height: 3px;
+    background-color: #6EC1E4;
+    margin: 15px 0 15px 20px;
+}
+
+.response{
+    background-color: #1d489e;
+    margin-left: 20px;
+    padding: 10px 15px;
+    color: white;
+    border: rgba(255, 255, 255, 0);
+    width: 50%;
+    margin-top: 10px;
+}
+
+.lineResponse{
+    width: 30px;
+    height: 2px;
+    background-color: #6EC1E4;
+}
+
+.textResponse{
+    margin: 15px 0 ;
+    color: #54595F;
+}
+
+.nameResponse{
+    color: #6EC1E4;
+    font-size: 15px;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+.nameWebinarResponse{
+    color: #1d489e;
+    font-size: 15px;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+@media screen and (max-width: 1180px) {
+
+    .componentResponse{
+        width: 70%;
+    }
+}
+
+.leftLene{
+    width: 10%;
+    background-color: rgba(110, 193, 228, 0.29);
+}
+
+.rightValues{
+    width: 90%;
+}
+
+.headerValues{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 100px 0 100px 0;
+}
+
+.minContentValues{
+    width: 100%;
+    display: flex;
+}
+
+.lineBlueValues{
+    width: 10%;
+    height: 3px;
+    background-color: #6EC1E4;
+    margin: 15px 0;
+}
+
+.headerValuesTitle{
+    color: #1d489e;
+    font-weight: 700;
+    font-size: 55px;
+}
+
+.headerValuesText{
+    width: 50%;
+    font-weight: 400;
+    line-height: 1.7em;
+}
+
+.hisroryValues{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    margin-bottom: 50px;
+}
+
+.hisroryValuesTitle{
+    width: 20%;
+    color: #102D5E;
+    letter-spacing: 4px;
+    font-weight: 700;
+    margin-top: 15px;
+    font-size: 15px;
+    text-align: right;
+    margin-right: 15px;
+}
+
+.hisroryValuesTtxt {
+    width: 50%;
+    color: #757575;
+    line-height: 1.7em;
+    font-size: 15px;
+    text-align: justify;
+
+
+}
+.hisroryValuesTtxt2 {
+    width: 50%;
+    color: #757575;
+    line-height: 1.7em;
+    font-size: 15px;
+    margin-left:30px;
+
+}
+
+.photoBlockValues{
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    margin-bottom: 100px;
+}
+
+.photoBlockValues img{
+    width: 30%;
+    margin-left: -20px;
+}
+
+.hisroryValuesTtxtBold{
+    font-weight: bold;
+}
+
+.pointValuesComponent{
+    width: 100%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    margin-bottom: 100px;
+}
+
+.pointValuesComponent1{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 45px;
+}
+
+.pointValuesComponentText{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    width: 30%;
+    font-weight: 700;
+    margin-right: 15px;
+}
+.pointValuesComponentText1{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    width: 30%;
+    font-weight: 700;
+    margin-right: 15px;
+    color: #1d489e;
+    letter-spacing: 4px;
+}
+.pointValuesComponentText2 {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    width: 30%;
+    font-weight: 500;
+    color: #1d489e;
+    letter-spacing: 4px;
+    font-size: 25px;
+}
+
+.pointValuesComponentPoint{
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+}
+.pointValuesComponentPoint1{
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+    color: #54595F;
+    font-size: 15px;
+    margin-top:10px;
+}
+
+.pointValuesComponentTextTitle{
+    color: #102D5E;
+    font-weight: 700;
+    font-size: 15px;
+    letter-spacing: 4px;
+    margin-bottom: 20px;
+}
+
+.pointValuesComponentTextSubTitle{
+    text-align: right;
+    font-size: 15px;
+    color: #54595F;
+}
+
+.onePoint{
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.pointText{
+    margin-left: 10px;
+    color: #54595F;
+}
+
+.squareBlock{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    margin-bottom: 50px;
+}
+
+.square{
+    width: 70%;
+    height: 300px;
+    border-radius: 10px;
+    background-color: #1d489e;
+    color: white;
+    font-size: 25px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.squareText{
+    width: 70%;
+}
+
+.titleCollective{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin: 100px 0;
+}
+.miniTitleCollective{
+    color: #1d489e;
+    font-size: 15px;
+    margin-bottom: 15px;
+    letter-spacing: 2px;
+    font-weight: 700;
+}
+
+.miniSubTitleCollective{
+    color: #1d489e;
+    font-size: 55px;
+    font-weight: 800;
+}
+
+.componentCollective{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 50px;
+}
+
+.componentCollectiveText{
+    color: #54595F;
+    width: 80%;
+    font-size: 18px;
+}
+
+.titleCollective1{
+    color: #1d489e;
+    margin-bottom: 15px;
+    font-weight: 600;
+    width: 70%;
+}
+
+.pointCollective{
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.doneInputCollective{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 40%;
+    margin-right: 20px;
+}
+
+.imgInputCollective{
+    width: 35%;
+}
+
+.pointCollectiveText{
+    font-size: 19px;
+    color: #54595F;
+    margin-left: 10px;
+}
+
+.photoBlockCollective{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.photoBlockCollectiveOne{
+    display: flex;
+    width: 60%;
+    justify-content: center;
+}
+
+.blockPhotoAndText{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-right: 50px;
+}
+
+.blockPhoto{
+    width: 100%;
+    background-color: #6EC1E4;
+    border-radius: 15px;
+    margin-top: 20px;
+    margin-bottom: 15px;
+}
+
+.blockPhoto img{
+    border-radius: 15px;
+    margin-top: -10px;
+    margin-left: -10px;
+}
+
+.photoBlockCollectiveTitle{
+    margin: 15px 0;
+    color: #1d489e;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+.blockTextName{
+    font-size: 35px;
+    font-weight: 700;
+    color: #1d489e;
+}
+
+.blockTextTitle{
+    margin: 10px 0;
+    color: #6EC1E4;
+    font-weight: 600;
+}
+
+.blockTextSubTitle{
+    color: #54595F;
+    font-size: 17px;
+    margin-bottom: 25px;
+}
+
+.titleHead{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 25px 0 100px 0;
+}
+
+.titleTextHead{
+    font-size: 50px;
+    font-weight: 700;
+    color: #064881;
+}
+
+.lineHead{
+    width: 5%;
+    height: 2px;
+    background-color: #6EC1E4;
+}
+
+.mainPhoContainer{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 50px;
+}
+
+.mainPhoContainer img{
+    width: calc(30% + 40px);
+    margin-right: 40px;
+    height: 1%;
+}
+
+.mainTextContainerHead{
+    width: 35%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.text1Head{
+    margin: 15px 0;
+    color: #064881;
+    font-weight: 500;
+}
+
+.text2Head{
+    margin: 15px 0;
+    color: #064881;
+    font-weight: 600;
+    font-size: 60px;
+    width: 50%;
+}
+
+.lineHeadMain{
+    width: 15%;
+    height: 2px;
+    background-color: #6EC1E4;
+    margin: 15px 0;
+}
+
+.text3Head{
+    color: #54595F;
+    margin: 15px 0 60px;
+    font-size: 17px;
+}
+
+.pointHead{
+    width: 70%;
+
+}
+
+.pointHeadMain{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 150px;
+}
+
+.developmentHead{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 150px;
+
+}
+
+.developmentHeadLeft{
+    width: 20%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.developmentHeadRight{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+}
+
+.textHeadHi{
+    color: #54595F;
+    margin-bottom: 25px;
+    font-weight: 400;
+}
+
+.textHeadHiBold{
+    color: #54595F;
+    margin-bottom: 25px;
+    font-weight: 700;
+}
+
+.blocksHead{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.pontBlockHead{
+    display: flex;
+    flex-direction: column;
+}
+
+.pontBlockHeadText{
+    color: #064881;
+    width: 50%;
+    font-weight: 500;
+    font-size: 25px;
+}
+
+.pontBlockHeadYears{
+    font-size: 15px;
+    color: #54595F;
+}
+
+.developmentHeadLeftTitle{
+    color: #064881;
+    font-weight: 500;
+    letter-spacing: 1px;
+    font-size: 19px;
+}
+
+.bookBlocks{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.bookBlocks img{
+    width: calc(33.33% - 15px);
+    margin-right: 15px;
+    margin-bottom: 20px;
+}
+
+.footerHead{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 150px;
+}
+
+.footerHeadBlock{
+    width: 80%;
+    background-color: #064881;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 350px;
+    align-items: center;
+}
+
+.footerHeadBlock span{
+    width: 80%;
+    color: white;
+    text-align: center;
+    margin: 15px 0;
+}
+
+.footerHeadBlock a{
+    color: #6EC1E4;
+}
+
+.topBloc{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    margin-top: 100px;
+}
+
+.topBlockImg{
+    height: 380px;
+    top: 70px;
+    width: 100%;
+    position: absolute;
+    background-position: bottom center;
+    background-size: cover;
+    opacity: 0.18;
+    background-image: url("../img/clients.jpg");
+}
+
+.nameClientsTitle{
+    margin-top: 50px;
+    font-size: 55px;
+    font-weight: 700;
+    color: #064881;
+    margin-bottom: 15px;
+}
+
+
+.textHeadHiClients{
+    color: #54595F;
+    font-weight: 400;
+    width: 50%;
+    text-align: center;
+    margin-bottom: 200px;
+}
+
+.topBloc span{
+    opacity: 1;
+}
+
+.blocksClients{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    background-color: white;
+    padding: 30px 0;
+}
+
+.blocksClientsLeft{
+    width: 45%;
+    display: flex;
+    flex-direction: column;
+    margin-right: 50px;
+    align-items: flex-end;
+}
+
+.blocksClientsRight{
+    width: 45%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.startTitle{
+    color: #54595F;
+    font-size: 15px;
+    font-weight: 500;
+    letter-spacing: 1px;
+}
+
+.startTitleFooter{
+    color: #8a8f93;
+    font-size: 15px;
+    font-weight: 500;
+    letter-spacing: 1px;
+}
+
+.startTitleBlock{
+    color: #54595F;
+    font-size: 15px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    margin-bottom: 15px;
+}
+
+.blocksClientsLeftTitle{
+    color: #064881;
+    font-size: 35px;
+    text-align: right;
+    font-weight: 700;
+}
+
+.pointClientsRight{
+    width: calc(45% - 40px);
+    margin-right: 40px;
+    font-weight: 500;
+    font-size: 25px;
+    color: #54595F;
+    margin-bottom: 25px;
+}
+.pointClientsRightBlock{
+    font-weight: 500;
+    font-size: 25px;
+    color: #54595F;
+    margin: 25px 0;
+}
+
+.clientsServiceBlock{
+    width: 100%;
+    display: flex;
+    margin-top: 50px;
+    justify-content: space-evenly;
+    margin-bottom: 150px;
+}
+
+.clientsServiceBlock img{
+    width: 45%;
+}
+
+.clientsServiceContent{
+    width: 45%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+.blocksClientsRightTitle{
+    color: #064881;
+    font-size: 35px;
+    text-align: left;
+    font-weight: 700;
+    margin-top: 15px;
+    margin-bottom: 10px;
+}
+
+.lineClients{
+    width: 10%;
+    height: 2px;
+    background-color: #54595F;
+    margin-bottom: 15px;
+}
+
+.blocksClientsRightText{
+    color: #54595F;
+}
+
+.buttonClient{
+    width: 100%;
+    display: flex;
+    margin-top: 15px;
+    justify-content: flex-end;
+}
+
+.buttonClient button{
+    padding: 10px 15px;
+    background-color: white;
+    border: rgba(255, 255, 255, 0);
+    color: #54595F;
+    letter-spacing: 1px;
+}
+
+.OURClients{
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 100px;
+}
+
+.blocksClientsRightTextO{
+    color: #54595F;
+    width: 40%;
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.lineVerticalClients{
+    height: 50px;
+    width: 2px;
+    background: rgba(108, 112, 117, 0.58);
+    margin-bottom: 20px;
+}
+
+.OURClientsTitle{
+    color: #064881;
+    font-weight: 700;
+    font-size: 35px;
+    margin: 15px 0;
+}
+
+.blocksClientsCard{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 150px;
+    background-color: rgba(217, 217, 217, 0.44);
+}
+
+.blocksClientsCardMain{
+    width: 90%;
+    padding: 25px 0;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.blockClient{
+    width: calc(25% - 15px);
+    background-color: white;
+    margin-right: 15px;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 40px;
+}
+
+.blockClient span{
+    text-align: center;
+}
+
+.FooterClients{
+    width: 100%;
+    display: flex;
+    background-color: #102D5E;
+    padding: 100px 0;
+    justify-content: space-around;
+    align-items: flex-end;
+}
+
+.leftFooterClients{
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    margin-top: 50px;
+}
+
+.buttonFooterClients{
+    width: 20%;
+    padding: 15px 25px;
+    color: #54595F;
+    background-color: white;
+    border-radius: 5px;
+    border-color: rgba(0, 0, 0, 0);
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.startTextFooter{
+    color: white;
+    font-size: 55px;
+    width: 85%;
+}
+
+.libraryContainer{
+    justify-content: space-between;
+}
+
+[contentEditable]:focus {
+    outline: none;
+    border-color: royalblue;
+}
+
+.servicesMainBlockText{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.servicesMainBlockText b{
+    font-weight: 700;
+    color: #064881;
+    font-size: 25px;
+}
+
+.servicesGBlockText{
+    width: 100%;
+    background-color: #0170B9;
+    color: white;
+    padding: 15px;
+    display: flex;
+}
+
+.servicesGBlockTextDiv{
+    width: 80%;
+    font-weight: 300;
+    font-size: 18px;
+}
+
+.topTextService{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin: 50px 0;
+}
+
+.topTextServiceTitle{
+    width: 20%;
+    border-color: #B40A1B;
+    color: #B40A1B;
+    border-top: 1px solid;
+    font-size: 25px;
+    font-weight: 600;
+    padding-top: 20px;
+}
+
+.topTextServiceSubTitle{
+    width: calc(40% - 50px);
+    margin-left: 50px;
+    font-weight: 300;
+    font-size: 18px;
+}
+
+.servicesGBlockTextMain{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.bottomService{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin: 50px 0;
+}
+
+.bottomServiceLeft{
+    width: calc(55% - 5px);
+    display: flex;
+    flex-direction: column;
+    margin-right: 5px;
+}
+
+.bottomService img{
+    width: 25%;
+}
+
+.bottomServiceLeftPoints{
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.bottomServiceLeftPoint{
+    width: calc(50% - 20px);
+    display: flex;
+    flex-direction: column;
+    margin-left: 20px;
+    margin-bottom: 20px;
+}
+
+.bottomServiceLeftSpan{
+    font-size: 35px;
+    font-weight: 700;
+    color: #001c31;
+    letter-spacing: 2px;
+}
+
+.bottomServiceLeftPointText{
+    font-size: 17px;
+    font-weight: 400;
+}
+
+.bottomServiceLeftPointLine{
+    border-left: #6EC1E4 solid 2px;
+    padding-left: 10px;
+    margin-bottom: 10px;
+    font-weight: 500;
+}
+@media screen and (max-width: 1030px) {
+
+    .blockLibrary  img{
+        width: 80%;
+        color: rgba(0, 0, 0, 0.42);
+    }
+
+    .pointsBar{
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+    }
+
+    .pointBar{
+        font-size:15px;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .bottomServiceLeftPoints{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .bottomService{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .topTextService{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .topTextServiceTitle{
+        margin-bottom: 25px;
+    }
+
+    .bottomService img,.bottomServiceLeftPoint,.bottomServiceLeft,.topTextServiceTitle,.topTextServiceSubTitle,.block img, .blockServices img{
+        width:80%
+    }
+
+    .dot{
+        display: none;
+    }
+
+    .buttonFooterClients{
+        width: 40%;
+    }
+
+    .startTextFooter{
+        font-size: 40px;
+        width: 100%;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    .FooterClients,.leftFooterClients{
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .blocksClientsCardMain{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .clientsServiceBlock{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .pointClientsRightBlock{
+        font-size: 20px;
+    }
+
+    .clientsServiceBlock img,.blockClient,.clientsServiceContent,.blocksClientsRightTextO{
+        width: 90%;
+    }
+
+    .blocksClientsLeftTitle{
+        text-align: center;
+    }
+
+    .pointClientsRight{
+        width: calc(40% - 10px);
+        margin-right: 10px;
+        font-size: 18px;
+    }
+
+    .blocksClientsRight{
+        width:  100%;
+        align-items: center;
+        justify-content: center;
+
+    }
+
+    .blocksClientsLeft{
+        width: 90%;
+        justify-content: center;
+    }
+
+    .blocksClients{
+        flex-direction: column;
+    }
+
+    .topBloc span{
+        text-align: center;
+    }
+
+    .footerHeadBlock span{
+        font-size: 15px;
+    }
+
+    .mainPhoContainer,.blocksHead,.developmentHead{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .pontBlockHead{
+        margin-bottom: 20px;
+    }
+
+    .mainTextContainerHead,.pontBlockHead,.developmentHeadRight,.developmentHeadLeft{
+        width: 90%;
+    }
+
+    .mainPhoContainer img{
+        margin-right: 0;
+        width: 90%;
+    }
+
+    .titleTextHead{
+        text-align: center;
+    }
+
+    .photoBlockCollectiveTitle{
+        font-size: 18px;
+        text-align: center;
+    }
+
+    .photoBlockCollectiveOne{
+        flex-direction: column;
+    }
+
+    .imgInputCollective{
+        width: 90%;
+    }
+
+    .doneInputCollective{
+        width: 90%;
+    }
+
+    .componentCollective{
+        flex-direction: column;
+        width: calc(100% - 20px);
+        margin-left: 20px;
+    }
+
+    .miniSubTitleCollective{
+        text-align: center;
+    }
+
+    .headerValuesTitle{
+        font-size: 20px;
+    }
+
+    .headerValuesText{
+        width: 90%;
+        font-size: 15px;
+        text-align: center;
+    }
+
+    .hisroryValues{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .hisroryValuesTitle{
+        width: 90%;
+        margin-right: 0;
+        text-align: center;
+    }
+
+    .hisroryValuesTtxt{
+        width: 80%;
+        margin-right: 0;
+        text-align: justify;
+        font-size: 15px;
+    }
+
+    .photoBlockValues{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .photoBlockValues img{
+        width: 80%;
+        margin-left: 0;
+    }
+
+    .hisroryValuesTtxt2{
+        margin-left: 0;
+        width: 80%;
+    }
+
+    .pointValuesComponent{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .pointValuesComponentText{
+        width: 90%;
+        margin-bottom: 35px;
+        align-items: center;
+    }
+
+    .pointValuesComponentTextSubTitle{
+        text-align: center;
+    }
+
+    .pointValuesComponentPoint{
+        width: 90%;
+    }
+
+    .squareText{
+        font-size: 20px;
+    }
+
+
+
+    .response{
+        padding: 10px 0;
+        margin-top: 0;
+        margin-bottom: 10px;
+    }
+
+
+    .componentResponse{
+        flex-direction: column;
+        width: 90%;
+        align-content: center;
+    }
+
+    .pointResponse{
+        width: 90%;
+    }
+
+    .mainContentCalendar{
+        margin-bottom: 40vh;
+    }
+
+    .componentContentCalendar{
+        width: 90%;
+        flex-direction: column;
+    }
+
+    .photoCalendar{
+        width: 90%;
+        margin: 20px ;
+
+    }
+
+    .video{
+        width: 90%;
+    }
+
+    .flexContentVideo{
+        flex-direction: column;
+    }
+
+    .blockArticlesMain img{
+        width: 90%;
+    }
+
+    .blockArticlesMain{
+        flex-direction: column;
+    }
+
+    .titleArticlesText{
+        width: 90%;
+    }
+
+    .pointArticles{
+        width: 90%;
+    }
+
+    .titleArticlesPoint{
+        font-size: 15px;
+    }
+
+    .blockArticlesTop{
+        flex-direction:column;
+        align-items:center;
+    }
+
+    .titleArticles{
+        width: 90%;
+    }
+
+    .subtitleArticles{
+        width: 90%;
+    }
+
+    .mainArticles{
+        flex-wrap: nowrap;
+        flex-direction: column;
+    }
+
+    .componentArticles{
+        width: calc(100% - 50px);
+        margin:25px;
+
+    }
+
+    .mainContentServiceMainPoints{
+        width: 100%;
+        flex-direction:column;
+    }
+
+    .mainContentServicePoint{
+        width: 90%;
+    }
+
+    .textService{
+        font-size: 13px;
+        font-weight: 600;
+    }
+
+    .topic{
+        font-size: 25px;
+    }
+
+    .bigButton{
+        width: 90%;
+    }
+
+    .textByWebinar span{
+        width: 90%;
+        font-size: 20px;
+    }
+
+    .lecturersWebinarOne{
+        width: 90%;
+    }
+
+    .lecturersWebinarTwo{
+        flex-direction: column;
+    }
+
+    .blockInfoWebinar{
+        width: 90%;
+        margin-bottom: 15px;
+    }
+
+    .infoWebinar{
+        flex-direction: column;
+    }
+
+    .contentWebinarRight{
+        margin-bottom: 30px;
+        margin-left:0%;
+        width: 80%;
+    }
+
+    .contentWebinarLeftImg{
+        width: 100%;
+    }
+
+    .lecturerNameWebinar{
+        font-size: 25px;
+    }
+
+    .contentWebinarLeft{
+        width: 60%;
+    }
+
+    .webinarHeader{
+        flex-direction: column;
+    }
+
+    .titleWebinarSubtitle{
+        font-size: 14px;
+
+    }
+
+    .imgOneWebinar{
+        width: 35%;
+        height: auto;
+    }
+    .imgOneWebinar img{
+        height: auto;
+    }
+
+    .menuBarPoints{
+        width: 50%;
+    }
+
+    .responseWebinar{
+        flex-direction: column;
+        height: 500px;
+    }
+
+    .responseWebinar img{
+        max-width: 90%;
+        height: 65%;
+    }
+
+    .responseWebinar div{
+        width: calc(90% - 40px);
+    }
+
+    .servicesTextWebinar{
+        width: 90%;
+        font-size:20px;
+    }
+
+    .bookTop img{
+        width: 90%;
+        height: 1%;
+        margin: 10px 10px 15px  10%;
+    }
+
+    .bookTopRight{
+        margin: 10px 10px 15px  10%;
+        width: 90%;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+    }
+
+    .bookTop{
+        width: 90%;
+        display: flex;
+        flex-direction:column;
+    }
+
+    .bookBottom{
+        width: 90%;
+        display: flex;
+        flex-direction:column;
+        margin-top: 50px;
+        margin-bottom: 50px;
+    }
+
+    .bookBottomContent{
+
+        width: 90%;
+        margin: 10px 10px 15px  10%;
+    }
+
+    .pointsBar{
+        width: 80%;
+    }
+
+    .pointBar{
+        display: none
+    }
+
+    .footerBar{
+        margin-right: 20px;
+        font-size: 13px;
+    }
+
+    .divImgLogo{
+        position: absolute;
+        width: 100%;
+        height: var(--main-header-height);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .ImgLogo{
+        cursor: pointer;
+        width: 180px;
+        height: 40px;
+    }
+    .menuBar{
+        visibility: visible;
+        width: 20%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+    }
+
+    .carouselList{
+        flex-direction: column-reverse;
+        align-items: center;
+    }
+
+    .carouselListRight{
+        width: 35%;
+
+        margin-right: 0;
+    }
+
+    .carouselListLeftYellow{
+        width: 60%;
+        align-items: center;
+    }
+
+    .carouselListLeftSubtitleYellow{
+        height: 20px;
+        font-size: 45%;
+        width: 210px;
+    }
+
+    .carouselListLeftTitleYellow{
+        font-size: 112%;
+    }
+
+    .carouselListLeftMainTextYellow{
+        font-size: 50%;
+        margin-top: 0;
+        margin-bottom: 5px;
+    }
+
+    .carouselListLeftButtonYellow{
+        height: 35px;
+    }
+
+    .carouselListLeft{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-left: 0;
+    }
+
+    .carouselListLeftTitle{
+        font-size: 120%;
+    }
+
+    .carouselListLeftSubtitle{
+        font-size: 70%;
+        letter-spacing: 1px;
+        padding: 5px 10px;
+    }
+
+    .carouselListLeftMainText{
+        margin-top: 0;
+        font-size: 70%;
+        text-align: center;
+        margin-bottom: 24px;
+    }
+
+    .carouselListNoPhoto{
+        align-items: center;
+        justify-content: center;
+    }
+
+    .carouselListRightNo{
+        max-width: 100%;
+        height: 270px;
+    }
+
+    .block,.blockContacts, .blockServices,.blockLibrary,.blockPartners {
+        width: 100%;
+    }
+
+    .aboutBlock {
+        flex-basis: 100%;
+        margin-right: 0;
+    }
+
+    .contactsSubmit{
+        width: 100%;
+    }
+
+}

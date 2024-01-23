@@ -27,15 +27,21 @@ function Main() {
                     smooth: true,
                 })
                 localStorage.setItem("url","null")
+		b = false
             },1000)
         }
 
     }
 
 
+		window.onerror = function (message, source, lineno, colno, error) {
+  // Якщо ви не хочете показувати помилку
+  return true;
+};
 
-    return(
-            <div className="main">
+
+      return(
+   <div className="main">
                 <Header/>
                 <Carousel/>
                 <div className="textMini">

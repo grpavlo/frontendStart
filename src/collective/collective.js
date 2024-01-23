@@ -17,7 +17,8 @@ let namePhoto5 = "";
 let namePhoto6 = "";
 let namePhoto7 = "";
 let namePhoto8 = "";
-
+let namePhoto9 = "";
+let namePhoto10 = "";
 export default function Collective(){
 
     const[one,setOne] = useState("")
@@ -73,6 +74,16 @@ export default function Collective(){
     const [position8, setPosition8] = useState("");
     const [text8, setText8] = useState("");
 
+/*----------------------------*/
+    const [titleBlock7, setTitleBlock7] = useState("");
+    //namePhoto9
+    const [pib9, setPib9] = useState("");
+    const [position9, setPosition9] = useState("");
+    const [text9, setText9] = useState("");
+    //namePhoto10
+    const [pib10, setPib10] = useState("");
+    const [position10, setPosition10] = useState("");
+    const [text10, setText10] = useState("");
     function get(){
         fetch(server+"api/getCollective",{
             method: 'get',
@@ -129,8 +140,15 @@ export default function Collective(){
                     setPib8(data.pib8)
                     setPosition8(data.position8)
                     setText8(data.text8)
-
-
+                    namePhoto9= data.namephoto9
+                    setPib9(data.pib9)
+                    setPosition9(data.position9)
+                    setText9(data.text9)
+                    namePhoto10= data.namephoto10
+                    setPib10(data.pib10)
+                    setPosition10(data.position10)
+                    setText10(data.text10)
+                    setTitleBlock7(data.titleblock7)
                 }
 
             })
@@ -252,6 +270,27 @@ export default function Collective(){
                         <span className="blockTextName">{pib8}</span>
                         <span className="blockTextTitle">{position8}</span>
                         <span className="blockTextSubTitle">{text8}</span></div>
+                </div>
+            </div>
+            <div className="photoBlockCollective">
+                <span className="photoBlockCollectiveTitle">{titleBlock7}</span>
+                <div className="photoBlockCollectiveOne">
+                    <div className="blockPhotoAndText">
+                        <div className="blockPhoto">
+                            <img src={process.env.PUBLIC_URL+"/Collective/"+namePhoto9}/>
+                        </div>
+                        <span className="blockTextName">{pib9}</span>
+                        <span className="blockTextTitle">{position9}</span>
+                        <span className="blockTextSubTitle">{text9}</span>
+                    </div>
+
+                    <div className="blockPhotoAndText">
+                        <div className="blockPhoto">
+                            <img src={process.env.PUBLIC_URL+"/Collective/"+namePhoto10}/>
+                        </div>
+                        <span className="blockTextName">{pib10}</span>
+                        <span className="blockTextTitle">{position10}</span>
+                        <span className="blockTextSubTitle">{text10}</span></div>
                 </div>
             </div>
             <Footer/>

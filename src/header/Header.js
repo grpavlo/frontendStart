@@ -115,7 +115,7 @@ function Header() {
                         window.open("/","_self")
                         }}>Головна</span>
                         <Link className="point" smooth to="section1">Послуги</Link>
-                        <span className="point" >Відгуки</span>
+                        <span className="point" onClick={()=>window.open("/response","_self")}>Відгуки</span>
                         <Link className="point" smooth to="section2">Бібліотека</Link>
                         <div className="pointBar" onClick={()=>{
                             window.open("/book","_self")

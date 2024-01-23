@@ -16,8 +16,8 @@ let namePhoto5 = "";
 let namePhoto6 = "";
 let namePhoto7 = "";
 let namePhoto8 = "";
-
-
+let namePhoto9 = "";
+let namePhoto10 = "";
 export default function Collective(){
     const [placeholder,setPlaceholder] = useState("Додайте фото *")
     const [placeholder1,setPlaceholder1] = useState("Додайте фото *")
@@ -28,6 +28,8 @@ export default function Collective(){
     const [placeholder6, setPlaceholder6] = useState("Додайте фото *");
     const [placeholder7, setPlaceholder7] = useState("Додайте фото *");
     const [placeholder8, setPlaceholder8] = useState("Додайте фото *")
+    const [placeholder9, setPlaceholder9] = useState("Додайте фото *")
+    const [placeholder10, setPlaceholder10] = useState("Додайте фото *")
 
     const [value0,setValue0] = useState(null)
     const [value1, setValue1] = useState(null);
@@ -38,6 +40,8 @@ export default function Collective(){
     const [value6, setValue6] = useState(null);
     const [value7, setValue7] = useState(null);
     const [value8, setValue8] = useState(null);
+    const [value9, setValue9] = useState(null);
+    const [value10, setValue10] = useState(null);
 
     const [idFrom,setIdFrom] = useState(0)
 
@@ -91,6 +95,17 @@ export default function Collective(){
     const [pib8, setPib8] = useState("");
     const [position8, setPosition8] = useState("");
     const [text8, setText8] = useState("");
+
+    const [titleBlock7, setTitleBlock7] = useState("");
+    //namePhoto9
+    const [pib9, setPib9] = useState("");
+    const [position9, setPosition9] = useState("");
+    const [text9, setText9] = useState("");
+
+    //namePhoto10
+    const [pib10, setPib10] = useState("");
+    const [position10, setPosition10] = useState("");
+    const [text10, setText10] = useState("");
 
     const[one,setOne] = useState("")
 
@@ -194,11 +209,35 @@ export default function Collective(){
         }
     };
 
+    const handleChange9 = (newValue9) => {
+        setValue9(newValue9);
+        if(newValue9 !== null){
+            namePhoto9=newValue9.name
+            setPlaceholder9(namePhoto9)
+        }else{
+            namePhoto9=""
+            setPlaceholder9(namePhoto9)
+        }
+    };
+
+
+    const handleChange10 = (newValue10) => {
+        setValue10(newValue10);
+        if(newValue10 !== null){
+            namePhoto10=newValue10.name
+            setPlaceholder10(namePhoto10)
+        }else{
+            namePhoto10=""
+            setPlaceholder10(namePhoto10)
+        }
+    };
+
+
     function submit(e){
         e.preventDefault()
-        console.log(title,titlePoint,point1,point2,point3,namePhoto0,textBlock2,titleBlock3,namePhoto1,pib1,position1,text1,namePhoto2,pib2,position2,text2,namePhoto3,pib3,position3,text3,namePhoto4,pib4,position4,text4,titleBlock5,namePhoto5,pib5,position5,text5,namePhoto6,pib6,position6,text6,titleBlock6,namePhoto7,pib7,position7,text7,namePhoto8,pib8,position8,text8,titleBlock4)
-        if( placeholder !== "Додайте фото *" || placeholder1 !== "Додайте фото *" || placeholder2 !== "Додайте фото *" || placeholder3 !== "Додайте фото *" || placeholder4 !== "Додайте фото *" || placeholder5 !== "Додайте фото *" || placeholder6 !== "Додайте фото *" || placeholder7 !== "Додайте фото *" || placeholder8 !== "Додайте фото *"){
-            for (let i = 0; i < 9; i++) {
+        //console.log(title,titlePoint,point1,point2,point3,namePhoto0,textBlock2,titleBlock3,namePhoto1,pib1,position1,text1,namePhoto2,pib2,position2,text2,namePhoto3,pib3,position3,text3,namePhoto4,pib4,position4,text4,titleBlock5,namePhoto5,pib5,position5,text5,namePhoto6,pib6,position6,text6,titleBlock6,namePhoto7,pib7,position7,text7,namePhoto8,pib8,position8,text8,titleBlock4)
+        if( placeholder !== "Додайте фото *" || placeholder1 !== "Додайте фото *" || placeholder2 !== "Додайте фото *" || placeholder3 !== "Додайте фото *" || placeholder4 !== "Додайте фото *" || placeholder5 !== "Додайте фото *" || placeholder6 !== "Додайте фото *" || placeholder7 !== "Додайте фото *" || placeholder8 !== "Додайте фото *" || placeholder9 !== "Додайте фото *"  || placeholder10 !== "Додайте фото *"){
+            for (let i = 0; i < 11; i++) {
                 const valueName = `value${i}`;
 
                 if (eval(valueName) !== null) {
@@ -221,7 +260,7 @@ export default function Collective(){
                     'Content-Type': 'application/json',
                 },
                 body: JSON.stringify({
-                    title,titlePoint,point1,point2,point3,namePhoto0,textBlock2,titleBlock3,namePhoto1,pib1,position1,text1,namePhoto2,pib2,position2,text2,namePhoto3,pib3,position3,text3,namePhoto4,pib4,position4,text4,titleBlock5,namePhoto5,pib5,position5,text5,namePhoto6,pib6,position6,text6,titleBlock6,namePhoto7,pib7,position7,text7,namePhoto8,pib8,position8,text8,titleBlock4
+                    title,titlePoint,point1,point2,point3,namePhoto0,textBlock2,titleBlock3,namePhoto1,pib1,position1,text1,namePhoto2,pib2,position2,text2,namePhoto3,pib3,position3,text3,namePhoto4,pib4,position4,text4,titleBlock5,namePhoto5,pib5,position5,text5,namePhoto6,pib6,position6,text6,titleBlock6,namePhoto7,pib7,position7,text7,namePhoto8,pib8,position8,text8,titleBlock4,namePhoto9,pib9,position9,text9,namePhoto10,pib10,position10,text10,titleBlock7
                 })
             })
                 .then(response => response.text())
@@ -236,7 +275,8 @@ export default function Collective(){
                     setValue6(null);
                     setValue7(null);
                     setValue8(null);
-
+                    setValue9(null);
+                    setValue10(null);
                     get()
                 })
         }
@@ -298,6 +338,15 @@ export default function Collective(){
                     setPib8(data.pib8)
                     setPosition8(data.position8)
                     setText8(data.text8)
+                    namePhoto9= data.namephoto9
+                    setPib9(data.pib9)
+                    setPosition9(data.position9)
+                    setText9(data.text9)
+                    namePhoto10= data.namephoto10
+                    setPib10(data.pib10)
+                    setPosition10(data.position10)
+                    setText10(data.text10)
+		    setTitleBlock7(data.titleblock7)
                     setIdFrom(idFrom+1)
                     setValue0(null);
                     setValue1(null);
@@ -308,6 +357,8 @@ export default function Collective(){
                     setValue6(null);
                     setValue7(null);
                     setValue8(null);
+                    setValue9(null);
+                    setValue10(null);
                     setPlaceholder(namePhoto0)
                     setPlaceholder1(namePhoto1)
                     setPlaceholder2(namePhoto2)
@@ -317,7 +368,8 @@ export default function Collective(){
                     setPlaceholder6(namePhoto6)
                     setPlaceholder7(namePhoto7)
                     setPlaceholder8(namePhoto8)
-
+                    setPlaceholder9(namePhoto9)
+                    setPlaceholder10(namePhoto10)
                 }
 
             })
@@ -471,6 +523,35 @@ export default function Collective(){
                         <br/>
                         <Input style={{width:"100%",margin:"10px 0px 10px"}} placeholder="Текст 8" defaultValue={text8} onChange={(e)=>{setText8(e.target.value)}} />
                         <br/>
+
+
+			<Input style={{width:"100%",margin:"10px 0px 10px"}} placeholder="Заголовок сьомого блоку" defaultValue={titleBlock7} onChange={(e)=>{setTitleBlock7(e.target.value)}} />
+                        <MuiFileInput
+                            placeholder={placeholder9}
+                            value={value9}
+                            onChange={handleChange9}
+                            inputProps={{ accept: '.png, .jpeg, .jpg' }}
+                        />
+                        <br/>
+                        <Input style={{width:"100%",margin:"10px 0px 10px"}} placeholder="ПІБ 9" defaultValue={pib9} onChange={(e)=>{setPib9(e.target.value)}} />
+                        <br/>
+                        <Input style={{width:"100%",margin:"10px 0px 10px"}} placeholder="Посада 9" defaultValue={position9} onChange={(e)=>{setPosition9(e.target.value)}} />
+                        <br/>
+                        <Input style={{width:"100%",margin:"10px 0px 10px"}} placeholder="Текст 9" defaultValue={text9} onChange={(e)=>{setText9(e.target.value)}} />
+                        <br/>
+
+                        <MuiFileInput
+                            placeholder={placeholder10}
+                            value={value10}
+                            onChange={handleChange10}
+                            inputProps={{ accept: '.png, .jpeg, .jpg'}}
+                        />
+              <br/>
+                        <Input style={{width:"100%",margin:"10px 0px 10px"}} placeholder="ПІБ 10" defaultValue={pib10} onChange={(e)=>{setPib10(e.target.value)}} />
+                        <br/>
+                        <Input style={{width:"100%",margin:"10px 0px 10px"}} placeholder="Посада 10" defaultValue={position10} onChange={(e)=>{setPosition10(e.target.value)}} />
+                        <br/>
+                        <Input style={{width:"100%",margin:"10px 0px 10px"}} placeholder="Текст 10" defaultValue={text10} onChange={(e)=>{setText10(e.target.value)}} />
 
                         <div className={classes.seeMore}>
                             <Button type="submit">Відправити</Button>

@@ -7,6 +7,7 @@ import {Alert, Box, Button, Checkbox, Input, Modal, Snackbar, Typography} from "
 import {Close} from "@mui/icons-material/";
 import  bookImg from  "../img/1.jpg"
 import {cssModal} from "../cssModal/cssModal"
+import { Helmet } from 'react-helmet';
 
 export default function Book(){
     const [one,setOne]=useState("")
@@ -87,6 +88,11 @@ export default function Book(){
 
     return(
         <div className="main">
+	     <Helmet>
+        <title>Книга "МСФЗ: Короткий курс для практиків"</title>
+        <meta name="description" content="Книга 'МСФЗ: Короткий курс для практиків' Посібник призначений для головних бухгалтерів, фінансистів та аудиторів, які складають, перевіряють або використовують фінансову звітність за МСФЗ у своїй професійній діяльності. Посібник стане у пригоді науковцям, викладачам та студентам вищих навчальних закладів, а також особам, які самостійно вивчають міжнародну практику ведення обліку та складання фінансової звітності." />
+        <meta name="keywords" content="МСФЗ, Книга,Короткий курс для практиків,Короткий,курс,практиків" />
+      </Helmet>
             <Header/>
             <Snackbar   anchorOrigin={{  vertical: 'top', horizontal: 'right' }} open={openOk} autoHideDuration={6000} onClose={handleClose}>
                 <Alert onClose={handleCloseOk} severity="success" sx={{ width: '100%' }}>
